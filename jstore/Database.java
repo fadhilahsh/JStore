@@ -8,7 +8,7 @@
 public class Database
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private String[] listItem;
 
     /**
      * Constructor for objects of class Database
