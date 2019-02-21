@@ -26,14 +26,11 @@ public class Database
      */
     public void additem()
     {
-        return ;
     }
      public void removeItem()
     {
-     return ;
     }
      public void getItemDatabase()
     {
-     return ;
     }
 }
