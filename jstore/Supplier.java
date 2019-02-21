@@ -48,23 +48,23 @@ public class Supplier
     {
      return "";
     }
-     public int setId()
+     public int setId(int id)
     {
      return 0;
     }
-     public String setName()
+     public String setName(String name)
     {
      return "";
     }
-     public String setEmail()
+     public String setEmail(String Email)
     {
      return "";
     }
-     public String setPhoneNumber()
+     public String setPhoneNumber(String phoneNumber )
     {
      return "";
     }
-     public String setCity()
+     public String setCity(String city)
     {
      return "";
     }

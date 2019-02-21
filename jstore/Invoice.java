@@ -43,19 +43,19 @@ public class Invoice
     {
         return 0;
     }
-    public int setId()
+    public int setId(int id)
     {
         return 0;
     }
-    public int setIdItem()
+    public int setIdItem(int idItem)
     {
         return 0;
     }
-    public String setDate()
+    public String setDate(String date)
     {
         return "";
     }
-    public int setTotalPrice()
+    public int setTotalPrice(int totalPrice)
     {
         return 0;
     }
