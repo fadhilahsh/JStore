@@ -48,23 +48,23 @@ public class item
     {
         return "";
     }
-	public int setId()
+	public int setId(int id)
     {
         return 0;
     }
-	public String setName()
+	public String setName(String name)
     {
         return"";
     }
-	public int setStock()
+	public int setStock(int stock)
     {
         return 0;
     }
-	public int setPrice()
+	public int setPrice(int price)
     {
         return 0;
     }
-	public String setCategory()
+	public String setCategory(String category)
     {
         return "";
     }
