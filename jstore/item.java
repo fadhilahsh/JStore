@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class item here.
+ * Write a description of class Invoice here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Fadhilah S Shalihah
+ * @version 0.0
  */
 public class item
 {
@@ -13,11 +13,14 @@ public class item
     private int stock;
     private int price;
     private String category;
+    public static Supplier supplier;
+    {
+    }
 
     /**
      * Constructor for objects of class item
      */
-    public item()
+    public item(int id ,String name,int stock,int price,String category,Supplier supplier)
     {
     }
 
@@ -30,42 +33,57 @@ public class item
     public int getId ()
     {
         // put your code here
-        return 0;
+        return id;
     }
     public String getName()
     {
-        return "";
+        return name;
     }
     public int getStock()
     {
-        return 0;
+        return stock;
     }
-	public int getPrice()
+    public int getPrice()
     {
-        return 0;
+        return price;
     }
-	public String getCategory()
+    public String getCategory()
     {
-        return "";
+        return category;
     }
-	public void setId(int id)
+    public Supplier getsupplier()
     {
-        
+        return supplier;
     }
-	public void setName(String name)
+    /*@return int, return ke nilai id*/
+    public void setId(int id)
     {
-        
+        this.id = id;
     }
-	public void setStock(int stock)
+    /*@return int return ke nilai nama*/
+    public void setName(String name)
     {
-        
+        this.name = name;
     }
-	public void setPrice(int price)
+    /*@return int*/
+    public void setStock(int stock)
     {
-        
+        this.stock = stock;
     }
-	public void setCategory(String category)
+    /*@return int*/
+    public void setPrice(int price)
     {
-        
+        this.price = price;
     }
+    /*@return String*/
+    public void setCategory(String category)
+    {
+        this.category=category;
+    }
+    public void setSupplier(Supplier supplier)
+    {
+        this.supplier=supplier;
+    }
+   
+    
 }

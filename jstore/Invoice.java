@@ -2,21 +2,21 @@
 /**
  * Write a description of class Invoice here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Fadhilah S Shalihah
+ * @version 0.0
  */
 public class Invoice
 {
     // instance variables - replace the example below with your own
     private int id;
-    private int idItem;
+    private item item;
     private String date;
     private int totalPrice;
 
     /**
      * Constructor for objects of class Invoice
      */
-    public Invoice()
+    public Invoice(int id, item item, String date, int totalPrice)
     {
         // initialise instance variables
     }
@@ -29,34 +29,34 @@ public class Invoice
      */
     public int getId()
     {
-        return 0;
+        return id;
     }
-    public String getIdItem()
+    public item getIdItem()
     {
-        return "";
+        return item;
     }
     public String getDate()
     {
-        return "";
+        return date;
     }
     public int getTotalPrice()
     {
-        return 0;
+        return totalPrice;
     }
     public void setId(int id)
     {
-        
+        this.id = id;
     }
-    public void setIdItem(int idItem)
+    public void setItem(item item)
     {
-        
+        this.item=item;
     }
     public void setDate(String date)
     {
-        
+        this.date = date;
     }
     public void setTotalPrice(int totalPrice)
     {
-        
+        this.totalPrice = totalPrice;
     }
 }

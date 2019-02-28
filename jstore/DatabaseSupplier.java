@@ -5,37 +5,39 @@
  * @author Fadhilah S Shalihah
  * @version 0.0
  */
-public class Database
+public class DatabaseSupplier
 {
     // instance variables - replace the example below with your own
-    private String[] listItem;
-    public static item item;
-
+    private String[] listSupplier;
+    public static Supplier supplier;
     /**
-     * Constructor for objects of class Database
+     * Constructor for objects of class DatabaseSupplier
      */
-    public Database()
+    public DatabaseSupplier()
     {
-        // initialise instance variables
+       
     }
-   
-    
+
     /**
      * An example of a method - replace this comment with your own
      *
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-     public static boolean addItem(item item)
+    public static boolean addSupplier(Supplier supplier)
     {
         return true;
     }
-     public static boolean removeItem(item item)
+    public static void removeSupplier(Supplier supplier)
     {
-        return true;
+        
     }
-     public String getItemDatabase()
+    public String getSupplier()
     {
-        return "";
+      return "";  
+    }
+    public String getListSupplier()
+    {
+       return "";
     }
 }

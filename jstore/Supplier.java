@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Supplier here.
+ * Write a description of class Invoice here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Fadhilah S Shalihah
+ * @version 0.0
  */
 public class Supplier
 {
@@ -13,11 +13,12 @@ public class Supplier
     private String email;
     private String phoneNumber;
     private String City;
+    public static Location location;
 
     /**
      * Constructor for objects of class Supplier
      */
-    public Supplier()
+    public Supplier(int id, String name, String email, String phoneNumber, Location location)
     {
         
     }
@@ -30,42 +31,46 @@ public class Supplier
      */
     public int getId()
     {
-     return 0;
+     return id;
     }
      public String getName()
     {
-     return "";
+     return name;
     }
      public String getEmail()
     {
-     return "";
+     return email;
     }
      public String getPhoneNumber()
     {
-     return "";
+     return phoneNumber;
+    }
+    public Location getLocation()
+    {
+     return location;
     }
      public String getCity()
     {
-     return "";
+     return City;
     }
      public void setId(int id)
     {
-     
+     this.id=id;
     }
      public void setName(String name)
     {
-     
+     this.name=name;
     }
      public void setEmail(String Email)
     {
-     
+     this.email=email;
     }
      public void setPhoneNumber(String phoneNumber )
     {
-     
+     this.phoneNumber=phoneNumber;
     }
      public void setCity(String city)
     {
-    
+    this.City=City;
     }
 }
