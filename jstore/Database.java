@@ -1,41 +1,55 @@
-
-/**
- * Write a description of class Invoice here.
+ /**
+ * Class Database berfungsi sebagai informasi database dari item
  *
  * @author Fadhilah S Shalihah
- * @version 0.0
+ * @version 28/02/2019
  */
 public class Database
 {
-    // instance variables - replace the example below with your own
+    //variagel yang digunakan 
     private String[] listItem;
     public static item item;
-
     /**
-     * Constructor for objects of class Database
-     */
-    public Database()
-    {
-        // initialise instance variables
-    }
-   
-    
-    /**
-     * An example of a method - replace this comment with your own
+     * Bagian menambah item
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @method  addItem()
+     * @param   item
+     * @return false
      */
      public static boolean addItem(item item)
     {
-        return true;
+        return false;
     }
+    /**
+     * Bagian menghapus item
+     *
+     * @method  removeItem()
+     * @param   item
+     * @return false
+     */
      public static boolean removeItem(item item)
     {
-        return true;
+        return false;
     }
-     public String getItemDatabase()
+    /**
+     * Bagian menampilkan item
+     *
+     * @method  getItem()
+     * @param   item
+     * @return false
+     */
+    public item getItem()
     {
-        return "";
+        return item;
+    }
+    /**
+     * Bagian menampilkan list item
+     *
+     * @method  getItemDatabase()
+     * @return listItem
+     */
+     public String[] getItemDatabase()
+    {
+        return listItem;
     }
 }

@@ -1,76 +1,130 @@
-
 /**
- * Write a description of class Invoice here.
+ * Class Supplier berfungsi sebagai informasi supplier dengan lokasi 
  *
  * @author Fadhilah S Shalihah
- * @version 0.0
+ * @version 28/02/2019
  */
 public class Supplier
 {
-    // instance variables - replace the example below with your own
+    //variable yang digunakan
     private int id;
     private String name;
     private String email;
     private String phoneNumber;
-    private String City;
-    public static Location location;
+    private Location location;
 
     /**
-     * Constructor for objects of class Supplier
+     * Constructor untuk objek dari class Supplier
      */
     public Supplier(int id, String name, String email, String phoneNumber, Location location)
     {
-        
+     this.id=id;
+     this.name=name;
+     this.email=email;
+     this.phoneNumber=phoneNumber;
+     this.location=location;
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     *menampilkan nomor id supplier 
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @method getId()
+     * @return id
      */
     public int getId()
     {
      return id;
     }
+    /**
+     *menampilkan nama supplier 
+     *
+     * @method getName()
+     * @return name
+     */
      public String getName()
     {
      return name;
     }
+    /**
+     *menampilkan email supplier 
+     *
+     * @method getEmail()
+     * @return email
+     */
      public String getEmail()
     {
      return email;
     }
+    /**
+     *menampilkan nomor hanphone supplier 
+     *
+     * @method getPhoneNumber()
+     * @return phoneNumber
+     */
      public String getPhoneNumber()
     {
      return phoneNumber;
     }
+    /**
+     *menampilkan lokasi supplier 
+     * @method getLocation()
+     * @return location
+     */
     public Location getLocation()
     {
      return location;
     }
-     public String getCity()
-    {
-     return City;
-    }
+    /**
+     *mengubah id supplier 
+     * @method setId()
+     * @param id
+     */
      public void setId(int id)
     {
      this.id=id;
     }
+    /**
+     *mengubah nama supplier 
+     * @method setName()
+     * @param name
+     */
      public void setName(String name)
     {
      this.name=name;
     }
+    /**
+     *mengubah email supplier 
+     * @method setEmail()
+     * @param email
+     */
      public void setEmail(String Email)
     {
      this.email=email;
     }
+    /**
+     *mengubah nomor handphone supplier 
+     * @method setPhoneNumber()
+     * @param phoneNumber
+     */
      public void setPhoneNumber(String phoneNumber )
     {
      this.phoneNumber=phoneNumber;
     }
-     public void setCity(String city)
+    /**
+     *mengubah lokasi supplier 
+     * @method setLocation()
+     * @param location
+     */
+     public void setLocation(Location location)
     {
-    this.City=City;
+    this.location=location;
     }
+     /**
+     *menampilkan nama supplier 
+     * @method printData()
+     */
+     public void printData()
+     {
+     	System.out.println(name);
+     }
 }

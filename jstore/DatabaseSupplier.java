@@ -1,43 +1,50 @@
-
 /**
- * Write a description of class Invoice here.
+ * Class Databasesupplier berfungsi sebagai informasi database supplier 
  *
  * @author Fadhilah S Shalihah
- * @version 0.0
+ * @version 28/02/2019
  */
 public class DatabaseSupplier
 {
-    // instance variables - replace the example below with your own
+    //variabel yang digunakan
     private String[] listSupplier;
-    public static Supplier supplier;
-    /**
-     * Constructor for objects of class DatabaseSupplier
-     */
-    public DatabaseSupplier()
-    {
-       
-    }
+    private Supplier supplier;
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Menambah supplier
+     * @method addSupplier()
+     * @param  supplier
+     * @return false
      */
-    public static boolean addSupplier(Supplier supplier)
+    public boolean addSupplier(Supplier supplier)
     {
-        return true;
+        return false;
     }
+    /**
+     * Menambah supplier
+     * @method removeSupplier()
+     * @param  supplier
+     */
     public static void removeSupplier(Supplier supplier)
     {
         
     }
-    public String getSupplier()
+    /**
+     * Menampilkan nama supplier
+     * @method getSupplier()
+     * @return supplier
+     */
+    public Supplier getSupplier()
     {
-      return "";  
+      return supplier;  
     }
-    public String getListSupplier()
+    /**
+     * Menampilkan list supplier
+     * @method getListSupplier()
+     * @return listSupplier
+     */
+    public String[] getListSupplier()
     {
-       return "";
+       return listSupplier;
     }
 }

@@ -1,62 +1,106 @@
-
 /**
- * Write a description of class Invoice here.
+ * Class Invoice berfungsi sebagai informasi tagihan barang dan item 
  *
  * @author Fadhilah S Shalihah
- * @version 0.0
+ * @version 28/02/2019
  */
 public class Invoice
 {
-    // instance variables - replace the example below with your own
+    //variabel yang digunakan 
     private int id;
     private item item;
     private String date;
     private int totalPrice;
 
     /**
-     * Constructor for objects of class Invoice
+     * Constructor untuk objek dari class Invoice
      */
     public Invoice(int id, item item, String date, int totalPrice)
     {
-        // initialise instance variables
+        this.id=id;
+        this.item=item;
+        this.date=date;
+        this.totalPrice=totalPrice;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Menampilkan nomor Id inovice
+     * @method  getId()
+     * @return  id  
      */
     public int getId()
     {
         return id;
     }
-    public item getIdItem()
+    /**
+     * Menampilkan nama item
+     * @method  getItem()
+     * @return  item  
+     */
+    public item getItem()
     {
         return item;
     }
+    /**
+     * Menampilkan tanggal inovice
+     * @method  getDate()
+     * @return  date  
+     */
     public String getDate()
     {
         return date;
     }
+    /**
+     * Menampilkan total harga
+     * @method  getTotalPrice()
+     * @return  totalPrice  
+     */
     public int getTotalPrice()
     {
         return totalPrice;
     }
+    /**
+     * Menggubah nomor Id 
+     * @method  setId()
+     * @param  id  
+     */
     public void setId(int id)
     {
         this.id = id;
     }
+    /**
+     * Mengubah nama item
+     * @method  setItem()
+     * @param item  
+     */
     public void setItem(item item)
     {
         this.item=item;
     }
+     /**
+     * Mengubah tanggal
+     * @method  setDate()
+     * @param date  
+     */
     public void setDate(String date)
     {
         this.date = date;
     }
+    /**
+     * Mengubah total harga
+     * @method  setTotalPrice()
+     * @param totalPrice  
+     */
     public void setTotalPrice(int totalPrice)
     {
         this.totalPrice = totalPrice;
+    }
+    //Mencetak total harga
+    /**
+     * @method printData()
+     */
+    public void printData()
+    {
+        System.out.println(totalPrice); 
     }
 }

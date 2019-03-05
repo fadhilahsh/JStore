@@ -1,14 +1,16 @@
 #BlueJ class context
 comment0.target=Database
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Invoice\ here.\r\n\r\n\ @author\ Fadhilah\ S\ Shalihah\r\n\ @version\ 0.0\r\n
-comment1.params=
-comment1.target=Database()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Database\r\n
+comment0.text=\r\n\ Class\ Database\ berfungsi\ sebagai\ informasi\ database\ dari\ item\r\n\r\n\ @author\ Fadhilah\ S\ Shalihah\r\n\ @version\ 28/02/2019\r\n
+comment1.params=item
+comment1.target=boolean\ addItem(item)
+comment1.text=\r\n\ Bagian\ menambah\ item\r\n\r\n\ @method\ \ addItem()\r\n\ @param\ \ \ item\r\n\ @return\ false\r\n
 comment2.params=item
-comment2.target=boolean\ addItem(item)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
-comment3.params=item
-comment3.target=boolean\ removeItem(item)
+comment2.target=boolean\ removeItem(item)
+comment2.text=\r\n\ Bagian\ menghapus\ item\r\n\r\n\ @method\ \ removeItem()\r\n\ @param\ \ \ item\r\n\ @return\ false\r\n
+comment3.params=
+comment3.target=item\ getItem()
+comment3.text=\r\n\ Bagian\ menampilkan\ item\r\n\r\n\ @method\ \ getItem()\r\n\ @param\ \ \ item\r\n\ @return\ false\r\n
 comment4.params=
-comment4.target=java.lang.String\ getItemDatabase()
+comment4.target=java.lang.String[]\ getItemDatabase()
+comment4.text=\r\n\ Bagian\ menampilkan\ list\ item\r\n\r\n\ @method\ \ getItemDatabase()\r\n\ @return\ listItem\r\n
 numComments=5

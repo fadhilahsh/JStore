@@ -1,89 +1,154 @@
-
 /**
- * Write a description of class Invoice here.
+ * Class Item berfungsi sebagai informasi item untuk supplier
  *
  * @author Fadhilah S Shalihah
- * @version 0.0
+ * @version 28/02/2019
  */
 public class item
 {
-    // instance variables - replace the example below with your own
+    //variable yang digunakan 
     private int id;
     private String name;
     private int stock;
     private int price;
     private String category;
     public static Supplier supplier;
-    {
-    }
+    
 
     /**
-     * Constructor for objects of class item
+     * Constructor untuk objects dari class item
      */
     public item(int id ,String name,int stock,int price,String category,Supplier supplier)
     {
+        this.name = name;
+        this.id=id;
+        this.stock=stock;
+        this.price=price;
+        this.category=category;
+        this.supplier=supplier;
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Untuk menampilkan nomor id
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @method getId()
+     * @return ke id   
      */
     public int getId ()
     {
-        // put your code here
         return id;
     }
+    /**
+     * Untuk menampilkan nama dari Item
+     *
+     * @method getName()
+     * @return ke id   
+     */
     public String getName()
     {
         return name;
     }
+    /**
+     * Untuk menampilkan stock Item
+     *
+     * @method getStock()
+     * @return stock   
+     */
     public int getStock()
     {
         return stock;
     }
+    /**
+     * Untuk menampilkan harga dari Item
+     *
+     * @method getName()
+     * @return price  
+     */
     public int getPrice()
     {
         return price;
     }
+    /**
+     * Untuk menampilkan Kategori dari Item
+     *
+     * @method getCategory()
+     * @return category   
+     */
     public String getCategory()
     {
         return category;
     }
+    //Menampilkan supplier Item
+    /**
+     * Method getSupplier()
+     * @return supplier
+     */
     public Supplier getsupplier()
     {
         return supplier;
     }
-    /*@return int, return ke nilai id*/
+    //Untuk mengganti nomor id
+    /**
+     * Method setId()
+     * @param id
+     */
     public void setId(int id)
     {
         this.id = id;
     }
-    /*@return int return ke nilai nama*/
+    //Untuk mengganti nama item
+    /**
+     * Method setName()
+     * @param name
+     */
     public void setName(String name)
     {
         this.name = name;
     }
-    /*@return int*/
+    //Untuk mengganti stock item
+    /**
+     * Method setStock()
+     * @param stock
+     */
     public void setStock(int stock)
     {
         this.stock = stock;
     }
-    /*@return int*/
+    //Untuk mengganti harga item
+    /**
+     * Method setPrice()
+     * @param price
+     */
     public void setPrice(int price)
     {
         this.price = price;
     }
-    /*@return String*/
+    //Untuk mengganti kategori item
+    /**
+     * Method setCategory()
+     * @param category
+     */ 
     public void setCategory(String category)
     {
         this.category=category;
     }
+    //Untuk mengganti supplier item
+    /**
+     * Method setSupplier()
+     * @param supplier
+     */
     public void setSupplier(Supplier supplier)
     {
         this.supplier=supplier;
     }
+    /**
+    *untuk mencetak nama item
+    * method printData()
+    */
+    public void printData()
+    {
+        System.out.println(name);
+    }
    
-    
+ 
 }

@@ -1,59 +1,86 @@
-
 /**
- * Write a description of class Invoice here.
+ * Class Location berfungsi sebagai informasi lokasi 
  *
  * @author Fadhilah S Shalihah
- * @version 0.0
+ * @version 28/02/2019
  */
 public class Location
 {
-    // instance variables - replace the example below with your own
+    //variabel yang digunakan
     private String province;
     private String description;
     private String city;
 
     /**
-     * Constructor for objects of class Location
+     * Constructor untuk objek dari class Location
      */
     public Location(String city, String province, String description)
     {
-        // initialise instance variables
-
+        this.city=city;
+        this.province=province;
+        this.description=description;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Menampilkan nama provinsi
+     * @method getprovince()
+     * @return province
      */
     public String getprovince()
     {
-        // put your code here
         return province;
     }
+    /**
+     * Menampilkan nama kota
+     * @method getCity()
+     * @return city
+     */
     public String getCity()
     {
         return city;
     }
+    /**
+     * Menampilkan deskripsi
+     * @method getDescription()
+     * @return description
+     */
     public String getDescription()
     {
         return description;
     }
+    /**
+     * Mengubah nama provinsi
+     * @method setprovince()
+     * @param province
+     */
     public void setProvince(String province)
     {
         this.province=province;
     }
+    /**
+     * Mengubah nama kota
+     * @method setCity()
+     * @param city
+     */
      public void setCity(String city)
     {
         this.city=city;
     }
+    /**
+     * Mengubah deskripsi
+     * @method setDescription()
+     * @param description
+     */
      public void setDescription(String description)
     {
         this.description=description;
     }
-     public void printData()
+    /**
+     * mencetak nama provinsi
+     * Method printData()
+     */
+    public void printData()
     {
-        
+        System.out.println(province); 
     }
 }
