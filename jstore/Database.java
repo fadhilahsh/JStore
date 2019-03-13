@@ -8,7 +8,7 @@ public class Database
 {
     //variagel yang digunakan 
     private String[] listItem;
-    public static item item;
+    public static Item Item;
     /**
      * Bagian menambah item
      *
@@ -16,7 +16,7 @@ public class Database
      * @param   item
      * @return false
      */
-     public static boolean addItem(item item)
+     public static boolean addItem(Item Item)
     {
         return false;
     }
@@ -27,7 +27,7 @@ public class Database
      * @param   item
      * @return false
      */
-     public static boolean removeItem(item item)
+     public static boolean removeItem(Item Item)
     {
         return false;
     }
@@ -38,9 +38,9 @@ public class Database
      * @param   item
      * @return false
      */
-    public item getItem()
+    public Item getItem()
     {
-        return item;
+        return Item;
     }
     /**
      * Bagian menampilkan list item

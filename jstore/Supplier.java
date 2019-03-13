@@ -120,7 +120,7 @@ public class Supplier
     this.location=location;
     }
      /**
-     *menampilkan nama supplier 
+     * menampilkan nama supplier 
      * @method printData()
      */
      public void printData()

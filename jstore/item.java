@@ -4,7 +4,7 @@
  * @author Fadhilah S Shalihah
  * @version 28/02/2019
  */
-public class item
+public class Item
 {
     //variable yang digunakan 
     private int id;
@@ -18,7 +18,7 @@ public class item
     /**
      * Constructor untuk objects dari class item
      */
-    public item(int id ,String name,int stock,int price,String category,Supplier supplier)
+    public Item(int id ,String name,int stock,int price,String category,Supplier supplier)
     {
         this.name = name;
         this.id=id;

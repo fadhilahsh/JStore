@@ -1,7 +1,10 @@
 #BlueJ class context
-comment0.target=Jstore
+comment0.target=JStore
+comment0.text=\r\n\ Kelas\ JStore\ merupakan\ main\ menu\ dari\ Objek\ JStore\ \r\n\r\n\ @author\ Fadhilah\ Siti\ Shalihah\r\n\ @version\ 28/02/2019\r\n
 comment1.params=
-comment1.target=Jstore()
+comment1.target=JStore()
+comment1.text=\r\n\ konstruktor\ untuk\ objek\ dari\ kelas\ JStore\r\n
 comment2.params=args
 comment2.target=void\ main(java.lang.String[])
+comment2.text=\r\n\ Fungsi\ utama\ yang\ akan\ dijalankan\r\n
 numComments=3

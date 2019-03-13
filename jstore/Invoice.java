@@ -8,17 +8,17 @@ public class Invoice
 {
     //variabel yang digunakan 
     private int id;
-    private item item;
+    private Item Item;
     private String date;
     private int totalPrice;
 
     /**
      * Constructor untuk objek dari class Invoice
      */
-    public Invoice(int id, item item, String date, int totalPrice)
+    public Invoice(int id, Item Item, String date, int totalPrice)
     {
         this.id=id;
-        this.item=item;
+        this.Item=Item;
         this.date=date;
         this.totalPrice=totalPrice;
     }
@@ -37,9 +37,9 @@ public class Invoice
      * @method  getItem()
      * @return  item  
      */
-    public item getItem()
+    public Item getItem()
     {
-        return item;
+        return Item;
     }
     /**
      * Menampilkan tanggal inovice
@@ -73,9 +73,9 @@ public class Invoice
      * @method  setItem()
      * @param item  
      */
-    public void setItem(item item)
+    public void setItem(Item Item)
     {
-        this.item=item;
+        this.Item=Item;
     }
      /**
      * Mengubah tanggal
