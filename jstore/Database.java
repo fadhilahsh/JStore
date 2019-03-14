@@ -18,6 +18,7 @@ public class Database
      */
      public static boolean addItem(Item itemD)
     {
+        itemDB = itemD;
         return true;
     }
     /**
