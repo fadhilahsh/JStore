@@ -21,16 +21,21 @@ public class JStore
      */    
     public static void main(String[] args)
 	{
-	Location rumah = new Location ("Bandung", "Jawa Barat", "Dingin");
-	Supplier Dila = new Supplier (1, "Fadhilah", "fadhilah568@gmil.com", "082214318257", rumah);
-	Item Barang = new Item (1, "samsung", 1, 1000, "Gadget", Dila);
-	Invoice tagihan = new Invoice (1, Barang, "20-11-18", 2000);
+	Location lokasi = new Location ("Bandung", "Jawa Barat", "Dingin");
+	Supplier Dila = new Supplier (1, "Fadhilah", "fadhilah568@gmil.com", "082214318257", lokasi);
+	/*Item Barang = new Item (1, "samsung", 1, 1000, "Gadget", Dila);
+	Invoice tagihan = new Invoice (1, Barang, "20-11-18", 2000);*/
 	
+	lokasi.printData();
 	Dila.printData();
-	System.out.println(Dila.getName());
-	Dila.setName("Budi");
-	Dila.printData();
-	Barang.printData();
+	//Barang.printData();
 	
+	Transaction pay = new Transaction();
+	pay.orderNewItem(Dila);
+	pay.orderSecondItem(Dila);
+	pay.orderRefubrishedItem(Dila);
+	pay.sellItemPaid(Database.getItem());
+	pay.sellItemUnpaid(Database.getItem());
+	pay.sellItemInstallment(Database.getItem());
 	}
 }

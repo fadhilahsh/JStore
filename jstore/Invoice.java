@@ -11,11 +11,13 @@ public class Invoice
     private Item Item;
     private String date;
     private int totalPrice;
+    private int totalItem;
+    private InvoiceStatus status;
 
     /**
      * Constructor untuk objek dari class Invoice
      */
-    public Invoice(int id, Item Item, String date, int totalPrice)
+    public Invoice(int id, Item Item, String date, int totalPrice, int totalItem, InvoiceStatus status)
     {
         this.id=id;
         this.Item=Item;
@@ -59,6 +61,14 @@ public class Invoice
     {
         return totalPrice;
     }
+    public int gettotalItem()
+    {
+        return totalItem;
+    }
+    public InvoiceStatus getInvoiceStatus()
+    {
+        return status;
+    }
     /**
      * Menggubah nomor Id 
      * @method  setId()
@@ -95,12 +105,22 @@ public class Invoice
     {
         this.totalPrice = totalPrice;
     }
+    public void setInvoiceStatus(InvoiceStatus status)
+    {
+        this.status = status;
+    }
     //Mencetak total harga
     /**
      * @method printData()
      */
     public void printData()
     {
-        System.out.println(totalPrice); 
+        System.out.println("==========INVOICE DAN ID==========");
+        System.out.println("tanggal: " + date);
+        System.out.println("item: " + Item);
+        System.out.println("total item: " + totalItem);
+        System.out.println("total harga:  " + totalPrice);
+        System.out.println("Status: " + status);
+        
     }
 }

@@ -11,14 +11,16 @@ public class Item
     private String name;
     private int stock;
     private int price;
-    private String category;
-    public static Supplier supplier;
+    private Supplier supplier;
+    private ItemCategory category;
+    private ItemStatus status;
+    
     
 
     /**
      * Constructor untuk objects dari class item
      */
-    public Item(int id ,String name,int stock,int price,String category,Supplier supplier)
+    public Item(int id ,String name,int stock, int price, ItemCategory category, ItemStatus status, Supplier supplier)
     {
         this.name = name;
         this.id=id;
@@ -61,7 +63,7 @@ public class Item
     /**
      * Untuk menampilkan harga dari Item
      *
-     * @method getName()
+     * @method getPrice()
      * @return price  
      */
     public int getPrice()
@@ -74,9 +76,13 @@ public class Item
      * @method getCategory()
      * @return category   
      */
-    public String getCategory()
+    public ItemCategory getCategory()
     {
         return category;
+    }
+    public ItemStatus getStatus()
+    {
+        return status;
     }
     //Menampilkan supplier Item
     /**
@@ -128,9 +134,13 @@ public class Item
      * Method setCategory()
      * @param category
      */ 
-    public void setCategory(String category)
+    public void setCategory(ItemCategory category )
     {
         this.category=category;
+    }
+    public void setStatus(ItemStatus status )
+    {
+        this.status=status;
     }
     //Untuk mengganti supplier item
     /**
@@ -145,9 +155,16 @@ public class Item
     *untuk mencetak nama item
     * method printData()
     */
-    public void printData()
+   public void printData()
     {
-        System.out.println(name);
+        System.out.println("==========ITEM==========");
+        System.out.println("id: " + id);
+        System.out.println("nama: " + name);
+        System.out.println("stok: " + stock);
+        System.out.println("Kategory: " + category);
+        System.out.println("Status:  " + status);
+        System.out.println("Supplier: " + supplier);
+        
     }
    
  
