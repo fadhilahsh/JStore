@@ -8,56 +8,74 @@
 public class Transaction
 {
     
-    public void orderNewItem(Supplier supplier)
+    public static void orderNewItem(Item item)
     {
-        Item newItem = new Item( 1, "Pensil", 2, 1000, ItemCategory.Stationery, ItemStatus.New, supplier);
-        Database.addItem(newItem);
-        Invoice newInvoice = new Invoice (1, newItem, "6 Maret2019", newItem.getPrice(), 5, InvoiceStatus.Paid );
-        newItem.setStatus(ItemStatus.New);
-        newInvoice.setInvoiceStatus(InvoiceStatus.Paid);
-        newItem.printData();
-        newInvoice.printData();
-    }
-    public void orderSecondItem (Supplier supplier)
-    {
-        Item newItem = new Item(2, "Pensil", 2, 1000, ItemCategory.Stationery, ItemStatus.Second, supplier);
-        Database.addItem(newItem);
-        Invoice newInvoice = new Invoice (1, newItem, "6 Maret2019", newItem.getPrice(), 5, InvoiceStatus.Paid );
-        newItem.setStatus(ItemStatus.New);
-        newInvoice.setInvoiceStatus(InvoiceStatus.Paid);
-        newItem.printData();
-        newInvoice.printData();
-    }
-    public void orderRefubrishedItem (Supplier supplier)
-    {
-        Item newItem = new Item(1, "Pencil", 2 ,10000 , ItemCategory.Stationery, ItemStatus.Refubrished, supplier);
-        Database.addItem(newItem);
-        Invoice newInvoice = new Invoice (1, newItem, "6 Maret2019", newItem.getPrice(), 5, InvoiceStatus.Paid );
-        newItem.setStatus(ItemStatus.New);
-        newInvoice.setInvoiceStatus(InvoiceStatus.Paid);
-        newItem.printData();
-        newInvoice.printData();
-    }
-    public void sellItemPaid (Item Item)
-    {
-        Invoice newInvoice = new Invoice (1, Item, "6 Maret2019", Item.getPrice(), 5, InvoiceStatus.Paid );
-        Item.setStatus(ItemStatus.Sold);
+        Invoice Beli = new Invoice (1, item, "21 Maret 2019", 5, item.getPrice());
         
-        newInvoice.printData();
+        if (Beli instanceof Sell_Paid)
+        {
+        System.out.println("Benar Invoice Type adalah Sell-Paid");        
+        }
+        else
+        {
+        System.out.println("Salah, Invice type bukan Sell_Paid");
     }
-    public void sellItemUnpaid (Item Item)
-    {
-        Invoice newInvoice = new Invoice (1, Item, "6 Maret2019", Item.getPrice(), 5, InvoiceStatus.Unpaid );
-        Item.setStatus(ItemStatus.Sold);
+}
         
-        newInvoice.printData();
+    public static void orderSecondItem (Item item)
+    {
+        Invoice Beli = new Invoice (1, item, "21 Maret 2019", 5, item.getPrice());
+        
+        if (Beli instanceof Sell_Paid)
+        {
+        System.out.println("Benar Invoice Type adalah Sell-Paid");        
+        }
+        else
+        {
+        System.out.println("Salah, Invice type bukan Sell_Paid");
     }
-    public void sellItemInstallment (Item Item)
+
+}
+    public static void orderRefubrishedItem (Item item)
     {
-        Invoice newInvoice = new Invoice (1, Item, "6 Maret2019", Item.getPrice(), 5, InvoiceStatus.Installment );
-        Item.setStatus(ItemStatus.Sold);
+        Invoice Beli = new Buy_Paid (1, item, "21 Maret 2019", 5, item.getPrice());
         
-        newInvoice.printData();
+        if (Beli instanceof Sell_Paid)
+        {
+        System.out.println("Benar Invoice Type adalah Sell-Paid");        
+        }
+        else
+        {
+        System.out.println("Salah, Invice type bukan Sell_Paid");
+    }
+    }
+    public void sellItemPaid (Item item)
+    {
+        Invoice Jual = new Sell_Paid (1, item, "21 Maret 2019", 5, item.getPrice());
+        InvoiceStatus Jual = InvoiceStatus.Paid;
+        ItemStatus itemstatus1 = ItemStatus.Sold;
+        item.setStatus(itemstatus1);
+        item.printData();
+        Jual.printData();
+    }
+    public void sellItemUnpaid (Item item)
+    {
+        Invoice Jual1 = new Sell_Paid (1, item, "21 Maret 2019", 5, item.getPrice());
+        InvoiceStatus Jual1 = InvoiceStatus.Unpaid;
+        ItemStatus itemstatus2 = ItemStatus.Sold;
+        item.setStatus(itemstatus2);
+        item.printData();
+        Jual1.printData();
+  
+    }
+    public void sellItemInstallment (Item item)
+    {
+       Invoice Jual2 = new Sell_Paid (1, item, "21 Maret 2019", 5, item.getPrice());
+        InvoiceStatus Jual2 = InvoiceStatus.Installment;
+        ItemStatus itemstatus3 = ItemStatus.Sold;
+        item.setStatus(itemstatus3);
+        item.printData();
+        Jual2.printData();
     }
     
 }

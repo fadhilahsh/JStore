@@ -4,23 +4,24 @@
  * @author Fadhilah S Shalihah
  * @version 28/02/2019
  */
-public class Invoice
+public abstract class Invoice
 {
     //variabel yang digunakan 
     private int id;
-    private Item Item;
+    private Item item;
     private String date;
-    private int totalPrice;
+    protected int totalPrice;
     private int totalItem;
     private InvoiceStatus status;
+    private InvoiceType type;
 
     /**
      * Constructor untuk objek dari class Invoice
      */
-    public Invoice(int id, Item Item, String date, int totalPrice, int totalItem, InvoiceStatus status)
+    public Invoice(int id, Item item, String date, int totalItem, int totalPrice )
     {
         this.id=id;
-        this.Item=Item;
+        this.item=item;
         this.date=date;
         this.totalPrice=totalPrice;
     }
@@ -41,7 +42,7 @@ public class Invoice
      */
     public Item getItem()
     {
-        return Item;
+        return item;
     }
     /**
      * Menampilkan tanggal inovice
@@ -69,6 +70,10 @@ public class Invoice
     {
         return status;
     }
+    public InvoiceType getInvoiceType()
+    {
+        return type;
+    }
     /**
      * Menggubah nomor Id 
      * @method  setId()
@@ -83,9 +88,9 @@ public class Invoice
      * @method  setItem()
      * @param item  
      */
-    public void setItem(Item Item)
+    public void setItem(Item item)
     {
-        this.Item=Item;
+        this.item=item;
     }
      /**
      * Mengubah tanggal
@@ -101,9 +106,9 @@ public class Invoice
      * @method  setTotalPrice()
      * @param totalPrice  
      */
-    public void setTotalPrice(int totalPrice)
+    public void setTotalItem(int totalItem)
     {
-        this.totalPrice = totalPrice;
+        this.totalItem = totalItem;
     }
     public void setInvoiceStatus(InvoiceStatus status)
     {
@@ -116,11 +121,11 @@ public class Invoice
     public void printData()
     {
         System.out.println("==========INVOICE DAN ID==========");
+        System.out.println("Id: " + id);
         System.out.println("tanggal: " + date);
-        System.out.println("item: " + Item);
-        System.out.println("total item: " + totalItem);
+        System.out.println("item: " + totalItem);
         System.out.println("total harga:  " + totalPrice);
         System.out.println("Status: " + status);
-        
+        System.out.println("Invoice Type: " + type);
     }
 }

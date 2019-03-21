@@ -7,16 +7,20 @@
  */
 public enum ItemCategory
 {
-    Electronics, Furniture, Stationery;
-}
-/*class itemCategory
-{
-    String Electronics;
-    String Furniture;
-    String Stationery;
-}*/
-/*public String toString()
-{
+    Electronics("Electronics"), 
+    Furniture("Furniture"), 
+    Stationery("Stationery");
     
-}*/
+    private String value;
+    ItemCategory(String value)
+    {
+        this.value=value;
+    }
+   
+    public String toString()
+    {
+    return value;
+}
+}
+
 

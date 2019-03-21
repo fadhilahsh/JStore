@@ -11,10 +11,9 @@ public class Item
     private String name;
     private int stock;
     private int price;
-    private Supplier supplier;
     private ItemCategory category;
     private ItemStatus status;
-    
+    private Supplier supplier;
     
 
     /**
@@ -22,9 +21,10 @@ public class Item
      */
     public Item(int id ,String name,int stock, int price, ItemCategory category, ItemStatus status, Supplier supplier)
     {
-        this.name = name;
         this.id=id;
+        this.name = name;
         this.stock=stock;
+        this.status=status;
         this.price=price;
         this.category=category;
         this.supplier=supplier;
@@ -158,12 +158,13 @@ public class Item
    public void printData()
     {
         System.out.println("==========ITEM==========");
-        System.out.println("id: " + id);
-        System.out.println("nama: " + name);
-        System.out.println("stok: " + stock);
-        System.out.println("Kategory: " + category);
-        System.out.println("Status:  " + status);
-        System.out.println("Supplier: " + supplier);
+        System.out.println("id: " + this.id);
+        System.out.println("nama: " + this.name);
+        System.out.println("stok: " + this.stock);
+        System.out.println("Harga: " + this.price);
+        System.out.println("Kategory: " + this.category);
+        System.out.println("Status:  " + this.status);
+        System.out.println("Supplier: " + this.supplier);
         
     }
    

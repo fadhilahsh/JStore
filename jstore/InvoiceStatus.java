@@ -7,16 +7,20 @@
  */
 public enum InvoiceStatus
 {
-    Paid, Unpaid, Installment
+    Paid("Paid"), 
+    Unpaid("Unpaid"), 
+    Installment("Installment");
+    
+    private String value;
+    InvoiceStatus(String value)
+    {
+        this.value=value;
+    }
+    
+    public String toString()
+    {
+    return value;
 }
-/*class invoiceStatus
-{
-    String Paid;
-    String Unpaid;
-    String Installment;
-}*/
-/*public String toString()
-{
-    return;
-}*/
+}
+
     

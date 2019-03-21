@@ -4,11 +4,15 @@
  * @author Fadhilah S Shalihah
  * @version 28/02/2019
  */
-public class Database
+public class DatabaseItem
 {
     //variagel yang digunakan 
     private String[] listItem;
+    private Item item;
     public static Item itemDB;
+    
+    public DatabaseItem()
+    {}
     /**
      * Bagian menambah item
      *
@@ -16,9 +20,9 @@ public class Database
      * @param   item
      * @return false
      */
-     public static boolean addItem(Item itemD)
+     public static boolean addItem(Item item)
     {
-        itemDB = itemD;
+        item = item;
         return true;
     }
     /**
@@ -28,7 +32,7 @@ public class Database
      * @param   item
      * @return false
      */
-     public static boolean removeItem(Item Item)
+     public static boolean removeItem(Item ItemDB)
     {
         return false;
     }

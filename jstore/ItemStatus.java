@@ -7,16 +7,19 @@
  */
 public enum ItemStatus
 {
-    New, Second, Refubrished, Sold
+    New("New"), 
+    Second("Second"), 
+    Refubrished("Refubrished"), 
+    Sold("Sold");
+    
+    private String value;
+    ItemStatus(String value)
+    {
+        this.value=value;
+    }
+   
+    public String toString()
+    {
+    return value;
 }
-/*public class itemStatus
-{
-    String New;
-    String Second;
-    String Refubrished;
-    String Sold;
-}*/
-/*public String toString()
-{
-    return ;
-}*/
+}
