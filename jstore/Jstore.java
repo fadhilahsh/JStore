@@ -15,7 +15,7 @@ public class JStore
 	{
 	Location lokasi = new Location ("Bandung", "Jawa Barat", "Dingin");
 	Supplier sup = new Supplier (1, "Fadhilah", "fadhilah568@gmil.com", "082214318257", lokasi);
-	Item item = new Item(1, "Fadhilah", 100, ItemStatus.New, 10000, sup , ItemCategory.Electronics);
+	Item item = new Item(1, "Fadhilah", 100, 10000, ItemCategory.Electronics, ItemStatus.New, sup);
 	lokasi.printData();
 	sup.printData();
 	DatabaseItem.addItem(item);
