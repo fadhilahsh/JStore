@@ -26,7 +26,7 @@ public class Location
      * @method getprovince()
      * @return province
      */
-    public String getprovince()
+    public String getProvince()
     {
         return province;
     }
@@ -82,9 +82,9 @@ public class Location
     public void printData()
     {
         System.out.println("==========LOCATION==========");
-        System.out.println("Provinsi: " + province);
-        System.out.println("Kota: " + city);
-        System.out.println("Deskripsi: " + description);
+        System.out.println("Provinsi: " + this.province);
+        System.out.println("Kota: " + this.city);
+        System.out.println("Deskripsi: " + this.description);
     
     }
 }

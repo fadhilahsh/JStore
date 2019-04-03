@@ -12,15 +12,17 @@ public enum ItemCategory
     Stationery("Stationery");
     
     private String value;
-    ItemCategory(String value)
+    private ItemCategory(String value)
     {
         this.value=value;
     }
    
     public String toString()
     {
-    return value;
-}
+        return value;
+    }
+    
+
 }
 
 

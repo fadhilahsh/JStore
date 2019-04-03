@@ -19,15 +19,16 @@ public class Item
     /**
      * Constructor untuk objects dari class item
      */
-    public Item(int id ,String name,int stock, int price, ItemCategory category, ItemStatus status, Supplier supplier)
+    public Item(int id ,String name,int stock, ItemStatus status, int price, Supplier supplier, ItemCategory category)
     {
         this.id=id;
         this.name = name;
         this.stock=stock;
         this.status=status;
         this.price=price;
-        this.category=category;
         this.supplier=supplier;
+        this.category=category;
+        
     }
 
     /**
@@ -161,10 +162,9 @@ public class Item
         System.out.println("id: " + this.id);
         System.out.println("nama: " + this.name);
         System.out.println("stok: " + this.stock);
-        System.out.println("Harga: " + this.price);
         System.out.println("Kategory: " + this.category);
         System.out.println("Status:  " + this.status);
-        System.out.println("Supplier: " + this.supplier);
+        System.out.println("Supplier: " + supplier.getName());
         
     }
    

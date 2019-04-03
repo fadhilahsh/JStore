@@ -9,6 +9,8 @@ public class DatabaseSupplier
     //variabel yang digunakan
     private String[] listSupplier;
     private Supplier supplier;
+    
+    
 
     /**
      * Menambah supplier
@@ -25,9 +27,9 @@ public class DatabaseSupplier
      * @method removeSupplier()
      * @param  supplier
      */
-    public static void removeSupplier(Supplier supplier)
+    public boolean removeSupplier(Supplier supplier)
     {
-        
+        return true;
     }
     /**
      * Menampilkan nama supplier

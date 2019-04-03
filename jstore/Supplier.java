@@ -130,7 +130,7 @@ public class Supplier
         System.out.println("Nama: " + name);
         System.out.println("Email: " + email);
         System.out.println("Nomor Telepon: " + phoneNumber);
-        System.out.println("Lokasi: " + location);
+        System.out.println("Lokasi Supplier: " + location.getCity() + " " + location.getProvince());
     
     }
 }

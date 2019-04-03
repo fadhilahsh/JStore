@@ -11,7 +11,7 @@ public enum InvoiceType
     Sell("Sell");
     
     private String value;
-    InvoiceType(String value)
+    private InvoiceType(String value)
     {
         this.value=value;
     }

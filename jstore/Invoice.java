@@ -24,6 +24,7 @@ public abstract class Invoice
         this.item=item;
         this.date=date;
         this.totalPrice=totalPrice;
+        this.totalItem=totalItem;
     }
 
     /**
@@ -66,14 +67,8 @@ public abstract class Invoice
     {
         return totalItem;
     }
-    public InvoiceStatus getInvoiceStatus()
-    {
-        return status;
-    }
-    public InvoiceType getInvoiceType()
-    {
-        return type;
-    }
+    public abstract InvoiceStatus getInvoiceStatus();
+    public abstract InvoiceType getInvoiceType();
     /**
      * Menggubah nomor Id 
      * @method  setId()
@@ -106,6 +101,10 @@ public abstract class Invoice
      * @method  setTotalPrice()
      * @param totalPrice  
      */
+    public void setTotalPrice(int totalPrice)
+    {
+        this.totalPrice=totalPrice;
+    }
     public void setTotalItem(int totalItem)
     {
         this.totalItem = totalItem;
@@ -118,14 +117,6 @@ public abstract class Invoice
     /**
      * @method printData()
      */
-    public void printData()
-    {
-        System.out.println("==========INVOICE DAN ID==========");
-        System.out.println("Id: " + id);
-        System.out.println("tanggal: " + date);
-        System.out.println("item: " + totalItem);
-        System.out.println("total harga:  " + totalPrice);
-        System.out.println("Status: " + status);
-        System.out.println("Invoice Type: " + type);
-    }
+    public abstract void printData();
+    
 }

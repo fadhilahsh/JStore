@@ -10,13 +10,14 @@
 public class Sell_Unpaid extends Invoice
 {
     
-    private InvoiceType INVOICE_TYPE = InvoiceType.Sell;
-    private InvoiceStatus INVOICE_STATUS = InvoiceStatus.Unpaid;
+    private static final InvoiceType INVOICE_TYPE = InvoiceType.Sell;
+    private static final InvoiceStatus INVOICE_STATUS = InvoiceStatus.Unpaid;
     private String dueDate;
    
-    public Sell_Unpaid(int id, Item item, String date, int totalPrice, int totalItem, String dueDate)
+    public Sell_Unpaid(int id, Item item, String date, int totalItem, int totalPrice, String dueDate)
     {
-        super(id,item,date,totalPrice,totalItem);
+        super(id, item, date, totalItem, totalPrice);
+        this.dueDate= dueDate;
     }
 
     public InvoiceStatus getInvoiceStatus()
@@ -32,16 +33,15 @@ public class Sell_Unpaid extends Invoice
         return dueDate;
     }
      
-    public void printData()
-    {
-        System.out.println("==========INVOICE DAN ID==========");
-        System.out.println("Id: " + super.getId());
-        System.out.println("tanggal: " + super.getDate());
-        System.out.println("item: " + super.gettotalItem());
-        System.out.println("total harga:  " + totalPrice);
-        System.out.println("Status: " + super.getInvoiceStatus());
-        System.out.println("Invoice Type: " + super.getInvoiceType());
-        System.out.println("DueDate:  " + dueDate);
+    public void printData(){
+        System.out.println("===========INVOICE Sell_Unpaid==========");
+        System.out.println("ID: "+getId());
+        System.out.println("Tanggal: "+getDate());
+        System.out.println("Item: "+getItem().getName());
+        System.out.println("Invoice Status: "+getInvoiceStatus());
+        System.out.println("Invoice Type: "+getInvoiceType());
+        System.out.println("Total Harga: "+getTotalPrice());    
+        System.out.println("DueDate: "+getDueDate());   
     }
     
     

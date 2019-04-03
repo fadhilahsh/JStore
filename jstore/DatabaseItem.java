@@ -3,12 +3,12 @@
  *
  * @author Fadhilah S Shalihah
  * @version 28/02/2019
+ * @Since 2019
  */
 public class DatabaseItem
 {
     //variagel yang digunakan 
     private String[] listItem;
-    private Item item;
     public static Item itemDB;
     
     public DatabaseItem()
@@ -22,7 +22,7 @@ public class DatabaseItem
      */
      public static boolean addItem(Item item)
     {
-        item = item;
+        itemDB = item;
         return true;
     }
     /**
@@ -34,6 +34,7 @@ public class DatabaseItem
      */
      public static boolean removeItem(Item ItemDB)
     {
+        itemDB = null;
         return false;
     }
     /**

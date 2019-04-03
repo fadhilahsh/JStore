@@ -2,7 +2,7 @@
 /**
  * Write a description of class Buy_Paid here.
  *
- * @author (your name)
+ * @author Fadhilah Siti Shalihah 
  * @version (a version number or a date)
  */
 
@@ -10,8 +10,8 @@
 public class Buy_Paid extends Invoice
 {
     
-    private InvoiceType INVOICE_TYPE = InvoiceType.Buy;
-    private InvoiceStatus INVOICE_STATUS = InvoiceStatus.Paid;
+    private static final InvoiceType INVOICE_TYPE = InvoiceType.Buy;
+    private static final InvoiceStatus INVOICE_STATUS = InvoiceStatus.Paid;
     
     public Buy_Paid(int id, Item item, String date, int totalPrice, int totalItem)
     {
@@ -31,12 +31,12 @@ public class Buy_Paid extends Invoice
     public void printData()
     {
         System.out.println("==========INVOICE DAN ID==========");
-        System.out.println("Id: " + super.getId());
-        System.out.println("tanggal: " + super.getDate());
-        System.out.println("item: " + super.gettotalItem());
-        System.out.println("total harga:  " + totalPrice);
-        System.out.println("Status: " + super.getInvoiceStatus());
-        System.out.println("Invoice Type: " + super.getInvoiceType());
+        System.out.println("Id: " + getId());
+        System.out.println("tanggal: " + getDate());
+        System.out.println("item: " + getItem().getName());
+        System.out.println("Status Status: " + getInvoiceStatus());
+        System.out.println("Invoice Type: " + getInvoiceType());
+        System.out.println("total harga:  " + getTotalPrice());
     }
     
     

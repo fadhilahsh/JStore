@@ -13,13 +13,14 @@ public enum ItemStatus
     Sold("Sold");
     
     private String value;
-    ItemStatus(String value)
+    private ItemStatus(String value)
     {
         this.value=value;
     }
    
     public String toString()
     {
-    return value;
-}
+        return value;
+    }
+    
 }

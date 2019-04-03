@@ -2,8 +2,8 @@
 /**
  * Enumeration class InvoiceStatus - write a description of the enum class here
  *
- * @author (your name here)
- * @version (version number or date here)
+ * @author Fadhilah S Shalihah
+ * @version 2019
  */
 public enum InvoiceStatus
 {

@@ -10,12 +10,12 @@
 public class Sell_Paid extends Invoice
 {
     
-    private InvoiceType INVOICE_TYPE = InvoiceType.Sell;
-    private InvoiceStatus INVOICE_STATUS = InvoiceStatus.Paid;
+    private static final InvoiceType INVOICE_TYPE = InvoiceType.Sell;
+    private static final InvoiceStatus INVOICE_STATUS = InvoiceStatus.Paid;
    
-    public Sell_Paid(int id, Item item, String date, int totalPrice, int totalItem)
+    public Sell_Paid(int id, Item item, String date, int totalItem, int totalPrice)
     {
-        super(id,item,date,totalPrice,totalItem);
+        super(id,item,date,totalItem,totalPrice);
     }
 
     public InvoiceStatus getInvoiceStatus()
@@ -27,15 +27,14 @@ public class Sell_Paid extends Invoice
         return INVOICE_TYPE; 
     }
      
-    public void printData()
-    {
-        System.out.println("==========INVOICE DAN ID==========");
-        System.out.println("Id: " + super.getId());
-        System.out.println("tanggal: " + super.getDate());
-        System.out.println("item: " + super.gettotalItem());
-        System.out.println("total harga:  " + totalPrice);
-        System.out.println("Status: " + super.getInvoiceStatus());
-        System.out.println("Invoice Type: " + super.getInvoiceType());
+    public void printData(){
+        System.out.println("===========INVOICE Sell_Paid==========");
+        System.out.println("ID: "+getId());
+        System.out.println("Tanggal: "+getDate());
+        System.out.println("Item: "+getItem().getName());
+        System.out.println("Invoice Status: "+getInvoiceStatus());
+        System.out.println("Invoice Type: "+getInvoiceType());
+        System.out.println("Total Harga: "+getTotalPrice());                
     }
     
     
