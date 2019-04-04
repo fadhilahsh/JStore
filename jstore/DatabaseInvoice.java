@@ -9,6 +9,7 @@ public class DatabaseInvoice
 {
     // instance variables - replace the example below with your own
     private Invoice[] listInvoice;
+    private Invoice invoice;
 
     /**
      * Constructor for objects of class DatabaseInvoice
@@ -29,19 +30,18 @@ public class DatabaseInvoice
         //itemDB = item;
         return false;
     }
-    public static void removeInvoice(Invoice invoice)
+    public void removeInvoice(Invoice invoice)
     {
-        //itemDB = item;
-        return ;
+       
     }
     public Invoice getInvoice()
     {
         //itemDB = item;
-        return Invoice;
+        return invoice;
     }
     public Invoice[] getListInvoice()
     {
         //itemDB = item;
-        return Invoice[];
+        return listInvoice;
     }
 }
