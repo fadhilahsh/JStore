@@ -8,7 +8,7 @@
 public class DatabaseItem
 {
     //variagel yang digunakan 
-    private item[] listItem;
+    private Item[] listItem;
     //public static Item itemDB;
     
     public DatabaseItem()
