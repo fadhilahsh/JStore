@@ -8,8 +8,8 @@
 public class DatabaseItem
 {
     //variagel yang digunakan 
-    private String[] listItem;
-    public static Item itemDB;
+    private item[] listItem;
+    //public static Item itemDB;
     
     public DatabaseItem()
     {}
@@ -22,7 +22,7 @@ public class DatabaseItem
      */
      public static boolean addItem(Item item)
     {
-        itemDB = item;
+        //itemDB = item;
         return true;
     }
     /**
@@ -34,7 +34,7 @@ public class DatabaseItem
      */
      public static boolean removeItem(Item ItemDB)
     {
-        itemDB = null;
+        //itemDB = null;
         return false;
     }
     /**
@@ -44,9 +44,9 @@ public class DatabaseItem
      * @param   item
      * @return false
      */
-    public static Item getItem()
+    public static void getItem()
     {
-        return itemDB;
+        return ;
     }
     /**
      * Bagian menampilkan list item
@@ -54,7 +54,7 @@ public class DatabaseItem
      * @method  getItemDatabase()
      * @return listItem
      */
-     public String[] getItemDatabase()
+     public Item[] getItemDatabase()
     {
         return listItem;
     }

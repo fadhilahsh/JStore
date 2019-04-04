@@ -4,12 +4,13 @@
  * @author Fadhilah S Shalihah
  * @version 28/02/2019
  */
+import java.util.Calendar;
 public abstract class Invoice
 {
     //variabel yang digunakan 
     private int id;
     private Item item;
-    private String date;
+    private Calendar date;
     protected int totalPrice;
     private int totalItem;
     private InvoiceStatus status;
@@ -18,13 +19,13 @@ public abstract class Invoice
     /**
      * Constructor untuk objek dari class Invoice
      */
-    public Invoice(int id, Item item, String date, int totalItem, int totalPrice )
+    public Invoice(int id, Item item, int totalItem)
     {
-        this.id=id;
-        this.item=item;
-        this.date=date;
-        this.totalPrice=totalPrice;
-        this.totalItem=totalItem;
+        this.id = id;
+        this.item = item;
+        this.totalItem = totalItem;
+        
+        setTotalPrice(item.getPrice()*totalItem);
     }
 
     /**
@@ -50,7 +51,7 @@ public abstract class Invoice
      * @method  getDate()
      * @return  date  
      */
-    public String getDate()
+    public Calendar getDate()
     {
         return date;
     }
@@ -67,8 +68,11 @@ public abstract class Invoice
     {
         return totalItem;
     }
+    
     public abstract InvoiceStatus getInvoiceStatus();
+    
     public abstract InvoiceType getInvoiceType();
+    
     /**
      * Menggubah nomor Id 
      * @method  setId()
@@ -92,7 +96,7 @@ public abstract class Invoice
      * @method  setDate()
      * @param date  
      */
-    public void setDate(String date)
+    public void setDate(Calendar date)
     {
         this.date = date;
     }
@@ -109,10 +113,17 @@ public abstract class Invoice
     {
         this.totalItem = totalItem;
     }
-    public void setInvoiceStatus(InvoiceStatus status)
+    public abstract void setInvoiceStatus(InvoiceStatus status);
+    
+    
+    private String value;
+    private Invoice(String value)
     {
-        this.status = status;
+        this.value=value;
     }
+    public abstract String toString();
+    
+    
     //Mencetak total harga
     /**
      * @method printData()

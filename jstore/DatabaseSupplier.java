@@ -8,7 +8,7 @@ public class DatabaseSupplier
 {
     //variabel yang digunakan
     private String[] listSupplier;
-    private Supplier supplier;
+    //private Supplier supplier;
     
     
 
@@ -36,9 +36,9 @@ public class DatabaseSupplier
      * @method getSupplier()
      * @return supplier
      */
-    public Supplier getSupplier()
+    public static void getSupplier()
     {
-      return supplier;  
+      return ;  
     }
     /**
      * Menampilkan list supplier

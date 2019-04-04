@@ -12,10 +12,14 @@ public class Sell_Paid extends Invoice
     
     private static final InvoiceType INVOICE_TYPE = InvoiceType.Sell;
     private static final InvoiceStatus INVOICE_STATUS = InvoiceStatus.Paid;
-   
-    public Sell_Paid(int id, Item item, String date, int totalItem, int totalPrice)
+    private Customer customer;
+    public Sell_Paid(int id, Item item, int totalItem, Customer customer)
     {
         super(id,item,date,totalItem,totalPrice);
+    }
+    public Customer getCustomer()
+    {
+        return INVOICE_STATUS;
     }
 
     public InvoiceStatus getInvoiceStatus()
@@ -25,6 +29,18 @@ public class Sell_Paid extends Invoice
     public InvoiceType getInvoiceType()
     {
         return INVOICE_TYPE; 
+    }
+    public void setCustomer(Customer customer)
+    {
+        this.customer=customer;
+    }
+    public String toString()
+    {
+        return "";
+    }
+     public void setInvoiceStatus(InvoiceStatus status)
+    {
+        
     }
      
     public void printData(){

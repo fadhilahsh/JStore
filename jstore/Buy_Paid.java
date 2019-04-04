@@ -6,16 +6,16 @@
  * @version (a version number or a date)
  */
 
-
-public class Buy_Paid extends Invoice
+import java.util.Calendar;
+public abstract class Buy_Paid extends Invoice
 {
     
     private static final InvoiceType INVOICE_TYPE = InvoiceType.Buy;
     private static final InvoiceStatus INVOICE_STATUS = InvoiceStatus.Paid;
     
-    public Buy_Paid(int id, Item item, String date, int totalPrice, int totalItem)
+    public Buy_Paid(int id, Item item, int totalItem)
     {
-        super(id,item,date,totalPrice,totalItem);
+        super(id,item,totalItem);
    
     }
 
@@ -26,6 +26,9 @@ public class Buy_Paid extends Invoice
     public InvoiceType getInvoiceType()
     {
       return INVOICE_TYPE;
+    }
+    public void setInvoiceStatus(InvoiceStatus status)
+    {
     }
     
     public void printData()
@@ -38,6 +41,9 @@ public class Buy_Paid extends Invoice
         System.out.println("Invoice Type: " + getInvoiceType());
         System.out.println("total harga:  " + getTotalPrice());
     }
-    
+    public String toString()
+    {
+        return "";
+    }
     
 }

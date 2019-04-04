@@ -5,7 +5,7 @@
  * @author Fadhilah
  * @version 2019
 */
-
+import java.util.Calendar;
 public class Sell_Installment extends Invoice
 {
     
@@ -13,11 +13,15 @@ public class Sell_Installment extends Invoice
    private static final InvoiceStatus INVOICE_STATUS = InvoiceStatus.Installment;
    private int installmentPeriod;
    private int installmentPrice;
+   private Customer customer;
     
-    public Sell_Installment(int id, Item item, String date, int totalItem, int totalPrice, int installmentPeriod)
+  
+    public Sell_Installment(int id, Item item, Calendar date, int totalItem, int installmentPeriod, Customer customer)
     {
-         super(id, item, date, totalItem, totalPrice);
+         super(id, item, date, totalItem);
          this.installmentPeriod = installmentPeriod;
+         //setInstallmentPrice(totalPrice);
+         setTotalPrice(installmentPrice);
     }
     
     public int getInstallmentperiod()
@@ -25,9 +29,13 @@ public class Sell_Installment extends Invoice
         return installmentPeriod;
     
     }
-    public int getInstalllmentprice()
+    public int getInstalllmentPrice()
     {
         return installmentPrice;    
+    }
+    public Customer getCustomer()
+    {
+        return Customer;    
     }
    
     public InvoiceStatus getInvoiceStatus()
@@ -47,6 +55,18 @@ public class Sell_Installment extends Invoice
     {
         this.totalPrice=(installmentPrice*installmentPeriod);
     
+    }
+    public void setCustomer(Customer customer)
+    {
+        this.customer=customer;
+    }
+    public String toString()
+    {
+        return "";
+    }
+     public void setInvoiceStatus(InvoiceStatus status)
+    {
+        
     }
     
      public void printData(){
