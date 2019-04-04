@@ -18,7 +18,7 @@ public class Sell_Installment extends Invoice
   
     public Sell_Installment(int id, Item item, Calendar date, int totalItem, int installmentPeriod, Customer customer)
     {
-         super(id, item, date, totalItem);
+         super(id, item, totalItem);
          this.installmentPeriod = installmentPeriod;
          //setInstallmentPrice(totalPrice);
          setTotalPrice(installmentPrice);
@@ -35,7 +35,7 @@ public class Sell_Installment extends Invoice
     }
     public Customer getCustomer()
     {
-        return Customer;    
+        return customer;    
     }
    
     public InvoiceStatus getInvoiceStatus()
