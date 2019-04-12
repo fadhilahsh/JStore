@@ -16,13 +16,14 @@ public class Supplier
     /**
      * Constructor untuk objek dari class Supplier
      */
-    public Supplier(int id, String name, String email, String phoneNumber, Location location)
+    public Supplier(String name, String email, String phoneNumber, Location location)
     {
-     this.id=id;
+     //this.id=id;
      this.name=name;
      this.email=email;
      this.phoneNumber=phoneNumber;
      this.location=location;
+     id=DatabaseSupplier.getLastSupplierID()+1;
     }
 
     /**
@@ -123,14 +124,13 @@ public class Supplier
      * menampilkan nama supplier 
      * @method printData()
      */
-     public void printData()
+     public String toString()
     {
-        System.out.println("==========SUPPLIER==========");
-        System.out.println("ID: " + id);
-        System.out.println("Nama: " + name);
-        System.out.println("Email: " + email);
-        System.out.println("Nomor Telepon: " + phoneNumber);
-        System.out.println("Lokasi Supplier: " + location.getCity() + " " + location.getProvince());
-    
+        return "SUPPLIER"+
+        "\nID: " + id+
+        "\nName: " + name+
+        "\nEmail: " + email+
+        "\nPhone Number: " + phoneNumber+
+        "\nLocation: " + location.getCity();
     }
 }

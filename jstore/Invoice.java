@@ -4,130 +4,124 @@
  * @author Fadhilah S Shalihah
  * @version 28/02/2019
  */
+import java.util.ArrayList;
 import java.util.Calendar;
-public abstract class Invoice
+import java.util.GregorianCalendar;
+abstract public class Invoice
 {
     //variabel yang digunakan 
     private int id;
-    private Item item;
+    private ArrayList<Integer>Item;
     private Calendar date;
     protected int totalPrice;
-    private int totalItem;
-    private InvoiceStatus status;
-    private InvoiceType type;
-
+    //private int totalItem;
+    //private InvoiceStatus status;
+    //private InvoiceType type;
+    private boolean isActive = true;
+    private Customer customer;
+    //private static InvoiceStatus status;
+    //private final ArrayList<Integer> Id = new ArrayList<>(); 
     /**
      * Constructor untuk objek dari class Invoice
      */
-    public Invoice(int id, Item item, int totalItem)
+    public Invoice(ArrayList<Integer> item)
     {
-        this.id = id;
-        this.item = item;
-        this.totalItem = totalItem;
         
-        setTotalPrice(item.getPrice()*totalItem);
+        // this.setTotalPrice(item.getPrice() * this.getTotalItem());
+        id = DatabaseInvoice.getLastInvoiceID() + 1;
+        this.Item = item;
+        //this.date = new GregorianCalendar();
     }
 
-    /**
-     * Menampilkan nomor Id inovice
-     * @method  getId()
-     * @return  id  
-     */
     public int getId()
     {
         return id;
     }
-    /**
-     * Menampilkan nama item
-     * @method  getItem()
-     * @return  item  
-     */
-    public Item getItem()
+    
+    public ArrayList<Integer> getItem()
     {
-        return item;
+        return Item;
     }
-    /**
-     * Menampilkan tanggal inovice
-     * @method  getDate()
-     * @return  date  
-     */
+    
+    
     public Calendar getDate()
     {
         return date;
     }
-    /**
-     * Menampilkan total harga
-     * @method  getTotalPrice()
-     * @return  totalPrice  
-     */
+    
+   
     public int getTotalPrice()
     {
         return totalPrice;
     }
-    public int gettotalItem()
-    {
-        return totalItem;
-    }
+        
     
     public abstract InvoiceStatus getInvoiceStatus();
     
     public abstract InvoiceType getInvoiceType();
+      
     
-    /**
-     * Menggubah nomor Id 
-     * @method  setId()
-     * @param  id  
-     */
+    public boolean getIsActived()
+    {
+        return isActive;
+    }
+    
+    
+    public Customer getCustomer()
+    {
+        return customer;
+    }
+    
+    
     public void setId(int id)
     {
         this.id = id;
     }
-    /**
-     * Mengubah nama item
-     * @method  setItem()
-     * @param item  
-     */
-    public void setItem(Item item)
+    
+    
+    public void setItem(ArrayList<Integer> item)
     {
-        this.item=item;
+        this.Item = item;
     }
-     /**
-     * Mengubah tanggal
-     * @method  setDate()
-     * @param date  
+    
+    /**
+     * Method untuk mengubah tanggal invoice
+     *
+     * @param  date  tanggal dari suatu invoice
      */
     public void setDate(Calendar date)
     {
         this.date = date;
     }
-    /**
-     * Mengubah total harga
-     * @method  setTotalPrice()
-     * @param totalPrice  
-     */
+    
+    
     public void setTotalPrice(int totalPrice)
     {
-        this.totalPrice=totalPrice;
+        for(Integer invoice : Item)
+        {
+            totalPrice=totalPrice+DatabaseItem.getItemFromID(invoice).getPrice();
+        }
+        
     }
-    public void setTotalItem(int totalItem)
-    {
-        this.totalItem = totalItem;
-    }
+       
+    
     public abstract void setInvoiceStatus(InvoiceStatus status);
     
     
-    private String value;
-    private Invoice(String value)
+    public void setIsActive(boolean isActive)
     {
-        this.value=value;
+        this.isActive = isActive;
     }
-    public abstract String toString();
     
+   
+    public void setCustomer(Customer customer)
+    {
+        this.customer = customer;
+    }
     
-    //Mencetak total harga
     /**
-     * @method printData()
+     * Method untuk menampilkan total harga pada invoice
+     *
      */
-    public abstract void printData();
-    
+    public abstract String toString();
 }

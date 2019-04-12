@@ -12,7 +12,7 @@ public enum InvoiceStatus
     Installment("Installment");
     
     private String value;
-    InvoiceStatus(String value)
+    private InvoiceStatus(String value)
     {
         this.value=value;
     }

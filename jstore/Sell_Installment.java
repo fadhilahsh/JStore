@@ -5,6 +5,7 @@
  * @author Fadhilah
  * @version 2019
 */
+import java.util.ArrayList;
 import java.util.Calendar;
 public class Sell_Installment extends Invoice
 {
@@ -14,14 +15,17 @@ public class Sell_Installment extends Invoice
    private int installmentPeriod;
    private int installmentPrice;
    private Customer customer;
+   private boolean isActive; 
     
   
-    public Sell_Installment(int id, Item item, Calendar date, int totalItem, int installmentPeriod, Customer customer)
+    public Sell_Installment(ArrayList<Integer> item, int InstallmentPeriod, Customer customer)
     {
-         super(id, item, totalItem);
+         super(item);
          this.installmentPeriod = installmentPeriod;
          //setInstallmentPrice(totalPrice);
-         setTotalPrice(installmentPrice);
+         //setTotalPrice(installmentPrice);
+         this.customer=customer;
+         isActive = true;
     }
     
     public int getInstallmentperiod()
@@ -47,7 +51,7 @@ public class Sell_Installment extends Invoice
         return INVOICE_TYPE; 
     }
     
-    public void setInstallmentPrice()
+    public void setInstallmentPrice(int totalPrice)
     {
         this.installmentPrice=(totalPrice/installmentPeriod)*102/100;
     }
@@ -60,26 +64,33 @@ public class Sell_Installment extends Invoice
     {
         this.customer=customer;
     }
-    public String toString()
-    {
-        return "";
-    }
      public void setInvoiceStatus(InvoiceStatus status)
     {
         
     }
     
-     public void printData(){
-        System.out.println("===========INVOICE Sell_Installment==========");
-        System.out.println("ID: "+getId());
-        System.out.println("Date: "+getDate());
-        System.out.println("Item: "+getItem().getName());
-        System.out.println("Invoice Status: "+getInvoiceStatus());
-        System.out.println("Invoice Type: "+getInvoiceType());
-        setInstallmentPrice();
-        setTotalPrice();
-        System.out.println("Total Price: "+totalPrice);
-        System.out.println("Price Installment: "+ installmentPrice);
+    public String toString()
+    {
+        String string="==========INVOICE=======";
+        string += "\nid ="+getId();
+        string += "\nBuy date =" + getDate();
+        for (Integer invoice : getItem())
+        {
+            Item item = DatabaseItem.getItemFromID(invoice.intValue());
+            string += "\nItem: " + item.getName();
+            string += "\nJumlah: " + getItem().size();
+            string += "\nHarga: " + item.getPrice();
+            string += "\nSupplier id: " + item.getsupplier().getId();
+            string += "\nSupplier Name: " + item.getsupplier().getName();
+        }
+        string += "\nTotal Price: " + getTotalPrice();
+        string += "\nInstallment Price: " + installmentPrice;
+        string += "\nCustomer id: " + customer.getId();
+        string += "\nCustomer Name: " + customer.getName();
+        string += "\nStatus: " + INVOICE_STATUS;
+        string += "\nInstallment period: " + installmentPeriod;
+        string += "\nSell Success";
+        return string;
     }
     
 }

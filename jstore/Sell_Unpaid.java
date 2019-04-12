@@ -7,27 +7,32 @@
  */
 import java.util.*;
 import java.text.*;
+import java.util.Calendar;
+import java.util.ArrayList;
 import java.util.regex.*;
 
 public class Sell_Unpaid extends Invoice
 {
     
-    private static final InvoiceType INVOICE_TYPE = InvoiceType.Sell;
-    private static final InvoiceStatus INVOICE_STATUS = InvoiceStatus.Unpaid;
-    private Calendar dueDate;
+    private static InvoiceType INVOICE_TYPE = InvoiceType.Sell;
+    private static InvoiceStatus INVOICE_STATUS = InvoiceStatus.Unpaid;
+    private SimpleDateFormat dateFormat = new SimpleDateFormat ("dd MMM yyy");
     private Customer customer;
+    private boolean isActive;
+    private Calendar dueDate;
    
-    public Sell_Unpaid(int id, Item item, int totalItem, Calendar dueDate, Customer customer)
+    public Sell_Unpaid(ArrayList<Integer> item, Customer customer)
     {
-        super(id, item, totalItem);
-        this.dueDate= dueDate;
+        super(item);
         this.customer=customer;
+        isActive=true;
     }
-
+    @Override
     public InvoiceStatus getInvoiceStatus()
     {
         return INVOICE_STATUS;
     }
+    @Override
     public InvoiceType getInvoiceType()
     {
         return INVOICE_TYPE; 
@@ -40,24 +45,43 @@ public class Sell_Unpaid extends Invoice
     {
         return dueDate;
     }
+    
     public void setCustomer(Customer customer)
     {
         this.customer=customer;
     }
     public void setDueDate(Calendar dueDate)
     {
-        this.dueDate = new GregorianCalendar();
-        dueDate.add((GregorianCalendar.DATE), 1);
+        this.dueDate=dueDate;
     }
-     public String toString()
-    {
-        return "";
+    public String toString()
+    {{
+        String string="==========INVOICE=======";
+        string += "\nID ="+getId();
+        string += "\nBuy date =" + getDate();
+        for (Integer invoice : getItem())
+        {
+            Item item = DatabaseItem.getItemFromID(invoice.intValue());
+            string += "\nItem: " + item.getName();
+            string += "\nAmount: " + getItem().size();
+            string += "\nPrice: " + item.getPrice();
+            string += "\nSupplier ID: " + item.getsupplier().getId();
+            string += "\nSupplier Name: " + item.getsupplier().getName();
+        }
+        string += "\nPrice Total: " + getTotalPrice();
+        string += "\nCustomer ID: " + customer.getId();
+        string += "\nCustomer Name: " + customer.getName();
+        string += "\nStatus: " + INVOICE_STATUS;
+        string += "\nDue date: " + getDueDate();
+        string += "\nIf payment is not received by dueDate, transaction will be cancelled.";
+        return string;
     }
-     public void setInvoiceStatus(InvoiceStatus status)
+    }
+    public void setInvoiceStatus(InvoiceStatus status)
     {
         
     }
-    
+    /*
     public void printData(){
         System.out.println("===========INVOICE Sell_Unpaid==========");
         System.out.println("ID: "+getId());
@@ -67,7 +91,7 @@ public class Sell_Unpaid extends Invoice
         System.out.println("Invoice Type: "+getInvoiceType());
         System.out.println("Total Harga: "+getTotalPrice());    
         System.out.println("DueDate: "+getDueDate());   
-    }
+    }*/
     
     
 }

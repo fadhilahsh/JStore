@@ -19,9 +19,9 @@ public class Item
     /**
      * Constructor untuk objects dari class item
      */
-    public Item(int id ,String name,int stock, ItemStatus status, int price, Supplier supplier, ItemCategory category)
+    public Item(String name,int stock, int price, ItemCategory category,ItemStatus status, Supplier supplier)
     {
-        this.id=id;
+        id=DatabaseItem.getLastItemID()+1;
         this.name = name;
         this.stock=stock;
         this.status=status;
@@ -156,16 +156,15 @@ public class Item
     *untuk mencetak nama item
     * method printData()
     */
-   public void printData()
+   public String toString()
     {
-        System.out.println("==========ITEM==========");
-        System.out.println("id: " + this.id);
-        System.out.println("nama: " + this.name);
-        System.out.println("stok: " + this.stock);
-        System.out.println("Kategory: " + this.category);
-        System.out.println("Status:  " + this.status);
-        System.out.println("Supplier: " + supplier.getName());
-        
+        return "==========ITEM======="+
+        "\nID :" + id+
+        "\nName :"  + name+
+        "\nStok :" + stock+
+        "\nKategori :" + category+
+        "\nStatus :" + status+
+        "\nSupplier :" + supplier.getName();
     }
    
  

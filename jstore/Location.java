@@ -79,6 +79,13 @@ public class Location
      * mencetak nama provinsi
      * Method printData()
      */
+    public String toString()
+    {
+        return "Location"+
+        "\nprovinsi:" +province+
+        "\nkota:"+city+
+        "\ndeskripsi:"+description;
+    }
     
     /*public void printData()
     {

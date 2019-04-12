@@ -5,20 +5,25 @@
  * @author Fadhilah Siti Shalihah 
  * @version (a version number or a date)
  */
-
+import java.util.ArrayList;
 import java.util.Calendar;
-public abstract class Buy_Paid extends Invoice
+import java.util.*;
+import java.text.*;
+public class Buy_Paid extends Invoice
 {
     
     private static final InvoiceType INVOICE_TYPE = InvoiceType.Buy;
     private static final InvoiceStatus INVOICE_STATUS = InvoiceStatus.Paid;
+    private boolean isActive;
+    private SimpleDateFormat dateFormat = new SimpleDateFormat ("dd MMM yyy");
     
-    public Buy_Paid(int id, Item item, int totalItem)
+    public Buy_Paid(ArrayList<Integer> item)
     {
-        super(id,item,totalItem);
+        super(item);
+        isActive = false;
    
     }
-
+    @Override
     public InvoiceStatus getInvoiceStatus()
     {
         return INVOICE_STATUS;
@@ -27,11 +32,11 @@ public abstract class Buy_Paid extends Invoice
     {
       return INVOICE_TYPE;
     }
-    public void setInvoiceStatus(InvoiceStatus status)
+    /*public void setInvoiceStatus(InvoiceStatus status)
     {
-    }
+    }*/
     
-    public void printData()
+    /*public void printData()
     {
         System.out.println("==========INVOICE DAN ID==========");
         System.out.println("Id: " + getId());
@@ -40,9 +45,27 @@ public abstract class Buy_Paid extends Invoice
         System.out.println("Status Status: " + getInvoiceStatus());
         System.out.println("Invoice Type: " + getInvoiceType());
         System.out.println("total harga:  " + getTotalPrice());
-    }
+    }*/
+    @Override
     public String toString()
     {
+        System.out.println("ID = " + super.getId());
+        ArrayList<Integer> listItemID = DatabaseInvoice.getInvoice(super.getId()).getItem();
+        for(int tempID : listItemID)
+        {
+            System.out.println("Item = " + 
+            DatabaseItem.getItemFromID(tempID).getName());
+            System.out.println("Price = " + 
+            DatabaseItem.getItemFromID(tempID).getPrice());
+            System.out.println("Supplier ID = " + 
+            DatabaseItem.getItemFromID(tempID).getsupplier().getId());
+            System.out.println("Supplier name = " + 
+            DatabaseItem.getItemFromID(tempID).getsupplier().getName());
+        }
+        System.out.println("Buy date = " + dateFormat.format(super.getDate().getTime()));
+        System.out.println("Price total = " + super.getTotalPrice());
+        System.out.println("Status = " + this.getInvoiceStatus());
+        System.out.println("Buy success.");
         return "";
     }
     

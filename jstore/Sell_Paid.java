@@ -6,20 +6,24 @@
  * @version (a version number or a date)
  */
 
-
+import java.util.ArrayList;
 public class Sell_Paid extends Invoice
 {
     
     private static final InvoiceType INVOICE_TYPE = InvoiceType.Sell;
     private static final InvoiceStatus INVOICE_STATUS = InvoiceStatus.Paid;
     private Customer customer;
-    public Sell_Paid(int id, Item item, int totalItem, Customer customer)
+    private boolean isActive;
+    
+    public Sell_Paid(ArrayList<Integer> item, Customer customer)
     {
-        super(id,item,date,totalItem,totalPrice);
+        super(item);
+        this.customer=customer;
+        isActive=false;
     }
     public Customer getCustomer()
     {
-        return INVOICE_STATUS;
+        return customer;
     }
 
     public InvoiceStatus getInvoiceStatus()
@@ -34,16 +38,36 @@ public class Sell_Paid extends Invoice
     {
         this.customer=customer;
     }
-    public String toString()
-    {
-        return "";
-    }
+    
      public void setInvoiceStatus(InvoiceStatus status)
     {
         
     }
+    public String toString()
+    {
+        {
+        String string="==========INVOICE=======";
+        string += "\nID ="+getId();
+        string += "\nBuy date =" + getDate();
+        for (Integer invoice : getItem())
+        {
+            Item item = DatabaseItem.getItemFromID(invoice.intValue());
+            string += "\nItem: " + item.getName();
+            string += "\nAmount: " + getItem().size();
+            string += "\nPrice: " + item.getPrice();
+            string += "\nSupplier ID: " + item.getsupplier().getId();
+            string += "\nSupplier Name: " + item.getsupplier().getName();
+        }
+        string += "\nPrice Total: " + getTotalPrice();
+        string += "\nCustomer ID: " + customer.getId();
+        string += "\nCustomer Name: " + customer.getName();
+        string += "\nStatus: " + INVOICE_STATUS;
+        string += "\nSell Success";
+        return string;
+    }
+    }
      
-    public void printData(){
+    /*public void printData(){
         System.out.println("===========INVOICE Sell_Paid==========");
         System.out.println("ID: "+getId());
         System.out.println("Tanggal: "+getDate());
@@ -51,7 +75,7 @@ public class Sell_Paid extends Invoice
         System.out.println("Invoice Status: "+getInvoiceStatus());
         System.out.println("Invoice Type: "+getInvoiceType());
         System.out.println("Total Harga: "+getTotalPrice());                
-    }
+    }*/
     
     
 }
