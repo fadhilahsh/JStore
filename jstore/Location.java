@@ -81,18 +81,16 @@ public class Location
      */
     public String toString()
     {
-        return "Location"+
+        /*return "Location"+
         "\nprovinsi:" +province+
         "\nkota:"+city+
         "\ndeskripsi:"+description;
-    }
+        */
     
-    /*public void printData()
-    {
         System.out.println("==========LOCATION==========");
         System.out.println("Provinsi: " + this.province);
         System.out.println("Kota: " + this.city);
         System.out.println("Deskripsi: " + this.description);
-    
-    }*/
+        return "";
+    }
 }

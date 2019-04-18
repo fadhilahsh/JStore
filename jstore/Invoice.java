@@ -7,18 +7,19 @@
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-abstract public class Invoice
+public abstract class Invoice
 {
     //variabel yang digunakan 
     private int id;
-    private ArrayList<Integer>Item;
+    private ArrayList<Integer>item;
     private Calendar date;
     protected int totalPrice;
     //private int totalItem;
     //private InvoiceStatus status;
     //private InvoiceType type;
-    private boolean isActive = true;
+    private boolean isActive;
     private Customer customer;
+    private static InvoiceStatus status;
     //private static InvoiceStatus status;
     //private final ArrayList<Integer> Id = new ArrayList<>(); 
     /**
@@ -27,10 +28,9 @@ abstract public class Invoice
     public Invoice(ArrayList<Integer> item)
     {
         
-        // this.setTotalPrice(item.getPrice() * this.getTotalItem());
-        id = DatabaseInvoice.getLastInvoiceID() + 1;
-        this.Item = item;
-        //this.date = new GregorianCalendar();
+        this.id = DatabaseInvoice.getLastInvoiceID() + 1;
+        this.item = item;
+        this.date = new GregorianCalendar();
     }
 
     public int getId()
@@ -40,7 +40,7 @@ abstract public class Invoice
     
     public ArrayList<Integer> getItem()
     {
-        return Item;
+        return item;
     }
     
     
@@ -81,7 +81,7 @@ abstract public class Invoice
     
     public void setItem(ArrayList<Integer> item)
     {
-        this.Item = item;
+        this.item = item;
     }
     
     /**
@@ -97,16 +97,19 @@ abstract public class Invoice
     
     public void setTotalPrice(int totalPrice)
     {
-        for(Integer invoice : Item)
+        ArrayList<Integer> listItemID = DatabaseInvoice.getInvoice(id).getItem();
+        for(int tempID : listItemID)
         {
-            totalPrice=totalPrice+DatabaseItem.getItemFromID(invoice).getPrice();
+            this.totalPrice = totalPrice + DatabaseItem.getItemFromID(tempID).getPrice();
         }
         
     }
        
     
-    public abstract void setInvoiceStatus(InvoiceStatus status);
-    
+    public void setInvoiceStatus(InvoiceStatus status)
+    {
+        this.status = status;
+    }
     
     public void setIsActive(boolean isActive)
     {

@@ -23,7 +23,7 @@ public class Buy_Paid extends Invoice
         isActive = false;
    
     }
-    @Override
+    //@Override
     public InvoiceStatus getInvoiceStatus()
     {
         return INVOICE_STATUS;
@@ -32,10 +32,11 @@ public class Buy_Paid extends Invoice
     {
       return INVOICE_TYPE;
     }
-    /*public void setInvoiceStatus(InvoiceStatus status)
+    /*
+    public void setInvoiceStatus(InvoiceStatus status)
     {
-    }*/
-    
+    }
+    */
     /*public void printData()
     {
         System.out.println("==========INVOICE DAN ID==========");
@@ -49,6 +50,7 @@ public class Buy_Paid extends Invoice
     @Override
     public String toString()
     {
+        System.out.println("=========INVOICE========");
         System.out.println("ID = " + super.getId());
         ArrayList<Integer> listItemID = DatabaseInvoice.getInvoice(super.getId()).getItem();
         for(int tempID : listItemID)
@@ -58,9 +60,9 @@ public class Buy_Paid extends Invoice
             System.out.println("Price = " + 
             DatabaseItem.getItemFromID(tempID).getPrice());
             System.out.println("Supplier ID = " + 
-            DatabaseItem.getItemFromID(tempID).getsupplier().getId());
+            DatabaseItem.getItemFromID(tempID).getSupplier().getId());
             System.out.println("Supplier name = " + 
-            DatabaseItem.getItemFromID(tempID).getsupplier().getName());
+            DatabaseItem.getItemFromID(tempID).getSupplier().getName());
         }
         System.out.println("Buy date = " + dateFormat.format(super.getDate().getTime()));
         System.out.println("Price total = " + super.getTotalPrice());

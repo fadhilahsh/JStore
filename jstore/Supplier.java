@@ -23,7 +23,7 @@ public class Supplier
      this.email=email;
      this.phoneNumber=phoneNumber;
      this.location=location;
-     id=DatabaseSupplier.getLastSupplierID()+1;
+     this.id=DatabaseSupplier.getLastSupplierID()+1;
     }
 
     /**

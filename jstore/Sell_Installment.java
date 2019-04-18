@@ -80,8 +80,8 @@ public class Sell_Installment extends Invoice
             string += "\nItem: " + item.getName();
             string += "\nJumlah: " + getItem().size();
             string += "\nHarga: " + item.getPrice();
-            string += "\nSupplier id: " + item.getsupplier().getId();
-            string += "\nSupplier Name: " + item.getsupplier().getName();
+            string += "\nSupplier id: " + item.getSupplier().getId();
+            string += "\nSupplier Name: " + item.getSupplier().getName();
         }
         string += "\nTotal Price: " + getTotalPrice();
         string += "\nInstallment Price: " + installmentPrice;

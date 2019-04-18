@@ -31,46 +31,44 @@ public class DatabaseCustomer
         return LAST_CUSTOMER_ID;
     }
    
-    public static boolean addCustomer(Customer customer)
+    public static boolean addCustomer(Customer customer)throws CustomerAlreadyExistsException
     {
-        boolean value = false;
-        for(Customer customerDB : CUSTOMER_DATABASE)
+        boolean found = false;
+        for(Customer temp : CUSTOMER_DATABASE)
         {
-            if(customer.getName()!=customerDB.getName()&&customer.getEmail()!=customerDB.getEmail())
+            if(temp.getName() == customer.getName() || temp.getEmail() == customer.getEmail())
             {
-                CUSTOMER_DATABASE.add(customer);
-                LAST_CUSTOMER_ID=customer.getId();
-                value=true;
+                throw new CustomerAlreadyExistsException(customer);
             }
         }
-        return value;
+        CUSTOMER_DATABASE.add(customer);
+        LAST_CUSTOMER_ID = customer.getId();
+        return true;
     }
     
-    public static boolean removeCustomer(int id)
+    public static boolean removeCustomer(int id)throws CustomerNotFoundException
     {
-        boolean value = false;
-        for(Customer customerDB : CUSTOMER_DATABASE)
+        for(Customer temp : CUSTOMER_DATABASE) 
         {
-            if(customerDB.getId()==id)
+            if(temp.getId() == id) 
             {
-            CUSTOMER_DATABASE.remove(id);    
-            value= true;
+                CUSTOMER_DATABASE.remove(temp);
+                return true;
+            }
         }
-        }
-        return value;
+        throw new CustomerNotFoundException(id);
     }
     
     public static Customer getCustomer(int id)
     {
-        Customer value = null;
-        for(Customer customerDB : CUSTOMER_DATABASE)
+        for(Customer temp : CUSTOMER_DATABASE) 
         {
-            if(customerDB.getId()==id)
+            if(temp.getId() == id) 
             {
-                value=customerDB;
+                return temp;
             }
         }
-        return value;
+        return null;
     }
     /*
     public static boolean addCustomer(Customer customer)

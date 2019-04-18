@@ -9,6 +9,7 @@ import java.util.*;
 import java.text.*;
 import java.util.regex.*;
 import java.text.SimpleDateFormat;
+import java.util.GregorianCalendar;
 
 public class Customer
 {
@@ -28,17 +29,17 @@ public class Customer
        this.email = email;
        this.username = username;
        this.password = password;
-       id = DatabaseCustomer.getLastCustomerID()+1;
+       this.id = DatabaseCustomer.getLastCustomerID()+1;
        this.birthDate = birthDate;   
     }
     
-    public Customer(String name, String email, String username, String password, int id, int year, int month, int dayOfMonth) 
+    public Customer(String name, String email, String username, String password, int year, int month, int dayOfMonth) 
     {
        this.name = name;
        this.email = email;
        this.username = username;
        this.password = password;
-       id = DatabaseCustomer.getLastCustomerID()+1;
+       this.id = DatabaseCustomer.getLastCustomerID()+1;
        this.birthDate = new GregorianCalendar(year, (month-1), dayOfMonth);
     }
    
@@ -79,15 +80,16 @@ public class Customer
     }
     public void setEmail(String email)
     {
-        String pattern =  "^[a-zA-Z0-9_+&*-]+(?:\\."+"[a-zA-Z0-9_+&*-]+)*@"+"(?:[a-zA-Z0-9-]+\\.)+[a-z]" +"[A-Z]{2,7}$";
-        Pattern p = Pattern.compile(pattern);
-        Matcher m = p.matcher(email);
-        if (m.find()) {
-            System.out.println("Email : " + m.group());
+        if(Pattern.matches("^[a-zA-Z0-9_+&*-]+(?:\\."+ 
+                            "[a-zA-Z0-9_+&*-]+)*@" + 
+                            "(?:[a-zA-Z0-9-]+\\.)+[a-z" + 
+                            "A-Z]{2,7}$", email))
+        {
             this.email = email;
-        } else {
-            System.out.println("Email : null");
-            this.email = email;
+        }
+        else
+        {
+            this.email = "";
         }
     }
      public void setUsername(String username)
@@ -96,18 +98,13 @@ public class Customer
     }
     public void setPassword(String password)
     {
-        String pattern ="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,}$";
-        Pattern p = Pattern.compile(pattern);
-        Matcher m = p.matcher(password);
-        if(m.find())
+        if(Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,}$", password))
         {
-            System.out.println("Password: NULL");
             this.password = password;
         }
         else
         {
-            System.out.println("Password null");
-            this.password = "Null";
+            this.password = "";
         }
     }
     public void setId(int id)
@@ -120,15 +117,17 @@ public class Customer
     }
     public void setBirthDate(int year,int month,int dayOfMonth)
     {
-         this.birthDate=new GregorianCalendar(year,month-1,dayOfMonth);
+         this.birthDate=new GregorianCalendar(year,(month-1),dayOfMonth);
     }
     public String toString()
     {
-        return "Customer"+
-        "\nNama: "+name+
-        "\nUsername: "+username+
-        "\nEmail: "+email+
-        "\nPassword: "+password;
+        System.out.println("Name: " + name);
+        System.out.println("Email: " + email);
+        System.out.println("Username: " + username);
+        System.out.println("Password: " + password);
+        System.out.println("ID: " + id);
+        System.out.println("Birthdate: " + birthDate);
+        return "";
     }
    
     

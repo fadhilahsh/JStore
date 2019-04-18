@@ -65,8 +65,8 @@ public class Sell_Unpaid extends Invoice
             string += "\nItem: " + item.getName();
             string += "\nAmount: " + getItem().size();
             string += "\nPrice: " + item.getPrice();
-            string += "\nSupplier ID: " + item.getsupplier().getId();
-            string += "\nSupplier Name: " + item.getsupplier().getName();
+            string += "\nSupplier ID: " + item.getSupplier().getId();
+            string += "\nSupplier Name: " + item.getSupplier().getName();
         }
         string += "\nPrice Total: " + getTotalPrice();
         string += "\nCustomer ID: " + customer.getId();
