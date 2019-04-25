@@ -2,118 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41a64f10-1c7c-44d7-b6c1-13bd8699d2b4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4/fileContent/fileContent.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JStore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JStore.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Buy_Paid.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Buy_Paid.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Buy_Paid.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerAlreadyExistsException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerAlreadyExistsException.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerAlreadyExistsException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerDoesntHaveActiveException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerDoesntHaveActiveException.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerDoesntHaveActiveException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerNotFoundException.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseCustomer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseCustomer.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseCustomer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseInvoice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseInvoice.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseInvoice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseItem.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseSupplier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseSupplier.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseSupplier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Invoice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Invoice.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Invoice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InvoiceAlreadyExistsException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InvoiceAlreadyExistsException.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InvoiceAlreadyExistsException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InvoiceNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InvoiceNotFoundException.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InvoiceNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InvoiceStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InvoiceStatus.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InvoiceStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InvoiceType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InvoiceType.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InvoiceType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Item.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Item.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemAlreadyExistsException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemAlreadyExistsException.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemAlreadyExistsException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemCategory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemCategory.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemCategory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemNotFoundException.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemStatus.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JStore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JStore.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JStore.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Location.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Location.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Location.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/README.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sell_Installment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sell_Installment.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sell_Installment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sell_Paid.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sell_Paid.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sell_Paid.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sell_Unpaid.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sell_Unpaid.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sell_Unpaid.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Supplier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Supplier.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Supplier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SupplierAlreadyExistsException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SupplierAlreadyExistsException.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SupplierAlreadyExistsException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SupplierNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SupplierNotFoundException.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SupplierNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Transaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Transaction.ctxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Transaction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doc/Item.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doc/JStore.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doc/Location.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doc/Supplier.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doc/allclasses.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doc/constant-values.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doc/element-list" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doc/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doc/logfile.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doc/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doc/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doc/stylesheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/src/LetsGo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/src/RunForYourLife.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package.bluej" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/LetsGo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/RunForYourLife.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/jstore/DatabaseCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/jstore/DatabaseCustomer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/jstore/JStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/jstore/JStore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/jstore/Sell_Installment.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/jstore/Sell_Installment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/jstore/Transaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/jstore/Transaction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/jstore/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/jstore/controller/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jstore/DatabaseCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jstore/DatabaseCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jstore/JStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jstore/JStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jstore/Sell_Installment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jstore/Sell_Installment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jstore/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jstore/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jstore/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jstore/controller/CustomerController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -179,11 +85,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/jstore/JStore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="266">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -191,16 +97,54 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/jstore/controller/CustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+            <state relative-caret-position="331">
+              <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#291#292#0" expanded="true" />
-                <element signature="e#329#330#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jstore/controller/InvoiceController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#502#511#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jstore/Transaction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="499">
+              <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jstore/DatabaseInvoice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="499">
+              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jstore/Sell_Installment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="499">
+              <caret line="63" column="5" lean-forward="true" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -220,11 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Customer.java" />
-        <option value="$PROJECT_DIR$/src/CustomerAlreadyExistsException.java" />
-        <option value="$PROJECT_DIR$/src/CustomerDoesntHaveActiveException.java" />
-        <option value="$PROJECT_DIR$/src/CustomerNotFoundException.java" />
-        <option value="$PROJECT_DIR$/src/DatabaseCustomer.java" />
         <option value="$PROJECT_DIR$/src/DatabaseInvoice.java" />
         <option value="$PROJECT_DIR$/src/DatabaseItem.java" />
         <option value="$PROJECT_DIR$/src/DatabaseSupplier.java" />
@@ -244,18 +183,15 @@
         <option value="$PROJECT_DIR$/src/main/java/jstore/Buy_Paid.java" />
         <option value="$PROJECT_DIR$/src/main/java/jstore/Customer.java" />
         <option value="$PROJECT_DIR$/src/main/java/jstore/CustomerAlreadyExistsException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jstore/Transaction.java" />
         <option value="$PROJECT_DIR$/src/main/java/jstore/SupplierNotFoundException.java" />
         <option value="$PROJECT_DIR$/src/main/java/jstore/SupplierAlreadyExistsException.java" />
         <option value="$PROJECT_DIR$/src/main/java/jstore/Supplier.java" />
         <option value="$PROJECT_DIR$/src/main/java/jstore/Sell_Unpaid.java" />
         <option value="$PROJECT_DIR$/src/main/java/jstore/Sell_Paid.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jstore/Sell_Installment.java" />
         <option value="$PROJECT_DIR$/src/main/java/jstore/Location.java" />
         <option value="$PROJECT_DIR$/src/main/java/jstore/ItemStatus.java" />
         <option value="$PROJECT_DIR$/src/main/java/jstore/CustomerDoesntHaveActiveException.java" />
         <option value="$PROJECT_DIR$/src/main/java/jstore/CustomerNotFoundException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jstore/DatabaseCustomer.java" />
         <option value="$PROJECT_DIR$/src/main/java/jstore/DatabaseInvoice.java" />
         <option value="$PROJECT_DIR$/src/main/java/jstore/DatabaseItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/jstore/DatabaseSupplier.java" />
@@ -268,13 +204,27 @@
         <option value="$PROJECT_DIR$/src/main/java/jstore/ItemAlreadyExistsException.java" />
         <option value="$PROJECT_DIR$/src/main/java/jstore/ItemCategory.java" />
         <option value="$PROJECT_DIR$/src/main/java/jstore/ItemNotFoundException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jstore/JStore.java" />
         <option value="$PROJECT_DIR$/src/main/java/jstore/Threading.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jstore/DatabaseCustomer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jstore/ItemController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jstore/SupplierController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jstore/controller/ItemController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jstore/controller/SupplierController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jstore/Sell_Installment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jstore/Transaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jstore/controller/InvoiceController.java" />
         <option value="$PROJECT_DIR$/src/main/java/jstore/controller/CustomerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jstore/JStore.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
     <option name="x" value="683" />
     <option name="width" value="683" />
     <option name="height" value="728" />
@@ -284,7 +234,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -332,6 +281,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -444,17 +394,18 @@
       <workItem from="1556111220965" duration="9690000" />
       <workItem from="1556148498952" duration="7900000" />
       <workItem from="1556171189397" duration="3359000" />
+      <workItem from="1556184042010" duration="7352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22829000" />
+    <option name="totallyTimeSpent" value="30181000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="683" y="0" width="683" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.9515885" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.44553706" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -464,7 +415,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.94789916" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.94957983" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -483,10 +434,10 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24962178" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.32905295" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" weight="0.32905295" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32744783" />
       <window_info anchor="right" id="Gradle" order="9" weight="0.5858748" />
       <window_info anchor="right" id="Bean Validation" order="10" />
     </layout>
@@ -507,9 +458,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/DatabaseSupplier.java" />
-    <entry file="file://$PROJECT_DIR$/src/InvoiceNotFoundException.java" />
-    <entry file="file://$PROJECT_DIR$/src/InvoiceStatus.java" />
     <entry file="file://$PROJECT_DIR$/src/InvoiceType.java" />
     <entry file="file://$PROJECT_DIR$/src/InvoiceAlreadyExistsException.java" />
     <entry file="file://$PROJECT_DIR$/src/ItemAlreadyExistsException.java" />
@@ -562,23 +510,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jstore/CustomerNotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" selection-start-column="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jstore/DatabaseCustomer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <element signature="e#358#368#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jstore/DatabaseInvoice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="15" selection-start-column="15" selection-end-column="15" />
@@ -686,20 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jstore/Sell_Installment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jstore/Transaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jstore/SupplierNotFoundException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -728,19 +645,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jstore/JStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jstore/Threading.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jstore/Threading.java" />
     <entry file="file://$PROJECT_DIR$/LetsGo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -748,14 +653,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jstore/controller/CustomerController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jstore/controller/ItemController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#291#292#0" expanded="true" />
-            <element signature="e#329#330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jstore/controller/SupplierController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jstore/DatabaseCustomer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
+          <folding>
+            <element signature="e#358#368#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jstore/DatabaseInvoice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jstore/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jstore/Sell_Installment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="63" column="5" lean-forward="true" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jstore/controller/InvoiceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#502#511#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jstore/controller/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jstore/JStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -19,7 +19,7 @@ public class Sell_Installment extends Invoice
    private boolean isActive;
    private SimpleDateFormat date = new SimpleDateFormat (" dd MM yyy");
   
-    public Sell_Installment(ArrayList<Integer> item, Customer customer)
+    public Sell_Installment(ArrayList<Integer> item, int installmentPeriod,  Customer customer)
     {
          super(item);
          this.installmentPeriod = installmentPeriod;

@@ -19,13 +19,10 @@ public class CustomerController
                              @RequestParam(value = "username")String username,
                              @RequestParam(value = "password") String password,
                              @RequestParam(value = "year", defaultValue = "1999") int year)
-/*
+    /*
     @RequestMapping("/newcustomer")
-    public Customer newCust(@RequestParam(value="name") String name,
-                            @RequestParam(value="email") String email,
-                            @RequestParam(value="username") String username,
-                            @RequestParam(value="password") String password
-    )*/
+    */
+
     {
         Customer customer = new Customer(name, email, username, password, year, 10, 10);
         try {
@@ -38,10 +35,19 @@ public class CustomerController
         return customer;
     }
 
+
     @RequestMapping("/getcustomer/{id}")
     public Customer getCust(@PathVariable int id) {
         Customer customer = DatabaseCustomer.getCustomer(id);
         return customer;
     }
+    @RequestMapping(value = "/logincustomer/{email, password}", method=RequestMethod.POST)
+    public Customer getLoginCust (@RequestParam(value = "email") String email,
+                                  @RequestParam(value = "password") String password)
+    {
+        return DatabaseCustomer.getCustomerLogin(email, password);
+
+    }
+
 
 }

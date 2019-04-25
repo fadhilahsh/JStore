@@ -1,4 +1,5 @@
 package jstore;
+import java.util.*;
 /**
  * Kelas JStore merupakan main menu dari Objek JStore 
  *
@@ -10,23 +11,19 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 
-//import java.util.ArrayList;
-
-
-
 public class JStore {
     public JStore() {
     }
 
     public static void main(String[] args) {
         SpringApplication.run(JStore.class, args);
-        /*
+
         Location lokasi = new Location("Bandung", "Jawa Barat", "Dingin");
         try {
             DatabaseSupplier.addSupplier(new Supplier("Baby", "baby.yl@ui.ac.id", "08221431823", lokasi));
             DatabaseSupplier.addSupplier(new Supplier("Bepel", "bepel.uph@ui.ac.id", "082214318230", lokasi));
             DatabaseSupplier.addSupplier(new Supplier("Bayleh", "bayleh.ast@ui.ac.id", "082214318211", lokasi));
-            DatabaseSupplier.addSupplier(new Supplier("Saripah", "hana.saripah@ui.ac.id", "082214318256", lokasi));
+            //DatabaseSupplier.addSupplier(new Supplier("Saripah", "hana.saripah@ui.ac.id", "082214318256", lokasi));
         } catch (SupplierAlreadyExistsException sup) {
             System.out.println(sup.getExMessage());
         }
@@ -62,10 +59,11 @@ public class JStore {
             DatabaseInvoice.addInvoice(new Sell_Paid(item1, DatabaseCustomer.getCustomer(1)));
             DatabaseInvoice.addInvoice(new Sell_Paid(item1, DatabaseCustomer.getCustomer(1)));
             DatabaseInvoice.addInvoice(new Sell_Unpaid(item2, DatabaseCustomer.getCustomer(2)));
-            DatabaseInvoice.addInvoice(new Sell_Installment(item3, DatabaseCustomer.getCustomer(3)));
+            //DatabaseInvoice.addInvoice(new Sell_Installment(item3, DatabaseCustomer.(1), DatabaseCustomer.getCustomer(3)));
         } catch (InvoiceAlreadyExistsException invoice) {
             System.out.println(invoice.getExMessage());
         }
+
 
         try{
             DatabaseInvoice.removeInvoice(7);
@@ -115,7 +113,7 @@ public class JStore {
         catch (InvoiceNotFoundException cancel) {
             System.out.println(cancel);
         }
-        */
+
 
     }
 
