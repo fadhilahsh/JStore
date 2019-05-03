@@ -3,85 +3,135 @@ package jstore.controller;
 import jstore.*;
 import org.springframework.web.bind.annotation.*;
 
-import javax.xml.crypto.Data;
 import java.util.ArrayList;
-import java.util.Calendar;
 
 @RestController
 public class InvoiceController {
 
-    @RequestMapping(value = "/invoicecustomer/{id_customer}", method = RequestMethod.GET)
-    public ArrayList<Invoice> invoiceCust(@RequestParam(value="id_customer") int id_customer) {
-        ArrayList<Invoice> tempArrayList = new ArrayList<Invoice>();
-        try {
-            tempArrayList = DatabaseInvoice.getActiveOrder(DatabaseCustomer.getCustomer(id_customer));
-        } catch (CustomerDoesntHaveActiveException e) {
-            e.getExMessage();
-        }
-        return tempArrayList;
-    }
-
-    @RequestMapping(value = "/invoice/{id_invoice}", method = RequestMethod.GET)
-    public Invoice getInvoice(@RequestParam(value="id_invoice") int id_invoice) {
-        return DatabaseInvoice.getInvoice(id_invoice);
-    }
-
-    @RequestMapping(value = "/createinvoicepaid", method = RequestMethod.POST)
-    public Invoice createInvoicePaid(@RequestParam(value="listItem") ArrayList<Integer> arrayListItem,
-                                     @RequestParam(value="customerID") int customerID
-    ){
-        Invoice tempInvoice = null;
-        try {
-            DatabaseInvoice.addInvoice(new Sell_Paid(arrayListItem, DatabaseCustomer.getCustomer(customerID)));
-        } catch (InvoiceAlreadyExistsException e) {
-            e.getExMessage();
-        }
-        tempInvoice = DatabaseInvoice.getInvoice(DatabaseInvoice.getLastInvoiceID());
-        return tempInvoice;
-    }
-
-    @RequestMapping(value = "/createinvoiceunpaid", method = RequestMethod.POST)
-    public Invoice createInvoiceUnpaid(@RequestParam(value="listItem") ArrayList<Integer> arrayListItem,
-                                       @RequestParam(value="customerID") int customerID
-    )
+    @RequestMapping(value = "/invoicecustomer/{id_customer}", method= RequestMethod.GET)
+    public ArrayList<Invoice> invoiceCust(@PathVariable int id_customer)
     {
-        Invoice tempInvoice = null;
+        ArrayList<Invoice> list;
+        Customer customer;
         try {
-            DatabaseInvoice.addInvoice(new Sell_Unpaid(arrayListItem, DatabaseCustomer.getCustomer(customerID)));
-        } catch (InvoiceAlreadyExistsException e) {
-            e.getExMessage();
+            customer = DatabaseCustomer.getCustomer(id_customer);
+            list = DatabaseInvoice.getActiveOrder(customer);
+            return list;
+        } catch (Exception ex) {
+            ex.getMessage();
+            return null;
         }
-        tempInvoice = DatabaseInvoice.getInvoice(DatabaseInvoice.getLastInvoiceID());
-        return tempInvoice;
+
     }
 
-    @RequestMapping(value = "/createinvoiceinstallment", method = RequestMethod.POST)
-    public Invoice createInvoiceInstallment(@RequestParam(value="listItem") ArrayList<Integer> arrayListItem,
-                                            @RequestParam(value="customerID") int customerID,
-                                            @RequestParam(value="installmentPeriod") int installmentPeriod
-    )
+    @RequestMapping(value = "/invoice/{id_invoice}", method= RequestMethod.GET)
+    public Invoice getInvoice(@PathVariable int id_invoice)
     {
-        Invoice tempInvoice = null;
+        Invoice invoice;
         try {
-            DatabaseInvoice.addInvoice(new Sell_Installment(arrayListItem, installmentPeriod,DatabaseCustomer.getCustomer(customerID)));
-        } catch (InvoiceAlreadyExistsException e) {
-            e.getExMessage();
+            invoice = DatabaseInvoice.getInvoice(id_invoice);
+        } catch (Exception ex) {
+            ex.getMessage();
+            return null;
         }
-        tempInvoice = DatabaseInvoice.getInvoice(DatabaseInvoice.getLastInvoiceID());
-        return tempInvoice;
+        return invoice;
     }
 
-    @RequestMapping(value = "/canceltransaction", method = RequestMethod.POST)
-    public Invoice cancelTransaction(@RequestParam(value="invoiceID") int invoiceID)
+    @RequestMapping(value = "/createinvoicepaid", method= RequestMethod.POST)
+    public Invoice createInvoicePaid(@RequestParam(value="listItem") ArrayList<Integer> listItem,
+                                     @RequestParam(value="id_customer") int id_customer)
     {
-        //Transaction.cancelTransaction(DatabaseInvoice.getInvoice(invoiceID));
-        return DatabaseInvoice.getInvoice(invoiceID);
+        Customer customer;
+        try {
+            customer = DatabaseCustomer.getCustomer(id_customer);
+        } catch (Exception ex) {
+            ex.getMessage();
+            return null;
+        }
+
+        Invoice invoice = new Sell_Paid(listItem, customer);
+
+        try {
+            DatabaseInvoice.addInvoice(invoice);
+        } catch (Exception ex) {
+            ex.getMessage();
+            return null;
+        }
+        return invoice;
     }
 
-    @RequestMapping(value = "/finishtransaction", method = RequestMethod.POST)
-    public Invoice finishTransaction(@RequestParam(value="invoiceID") int invoiceID)
+    @RequestMapping(value = "/createinvoiceunpaid", method= RequestMethod.POST)
+    public Invoice createInvoiceUnpaid(@RequestParam(value="listItem") ArrayList<Integer> listItem,
+                                       @RequestParam(value="id_customer") int id_customer)
     {
-        Transaction.finishTransaction(DatabaseInvoice.getInvoice(invoiceID));
-        return DatabaseInvoice.getInvoice(invoiceID);
+        Customer customer;
+        try {
+            customer = DatabaseCustomer.getCustomer(id_customer);
+        } catch (Exception ex) {
+            ex.getMessage();
+            return null;
+        }
+
+        Invoice invoice = new Sell_Unpaid(listItem, customer);
+
+        try {
+            DatabaseInvoice.addInvoice(invoice);
+        } catch (Exception ex) {
+            ex.getMessage();
+            return null;
+        }
+        return invoice;
+    }
+
+    @RequestMapping(value = "/createinvoiceinstallment", method= RequestMethod.POST)
+    public Invoice createInvoiceInstallment(@RequestParam(value="listItem") ArrayList<Integer> listItem,
+                                            @RequestParam(value="installment_period") int installment_period,
+                                            @RequestParam(value="id_customer") int id_customer)
+    {
+        Customer customer;
+        try {
+            customer = DatabaseCustomer.getCustomer(id_customer);
+        } catch (Exception ex) {
+            ex.getMessage();
+            return null;
+        }
+
+        Invoice invoice = new Sell_Installment(listItem, installment_period,customer);
+
+        try {
+            DatabaseInvoice.addInvoice(invoice);
+        } catch (Exception ex) {
+            ex.getMessage();
+            return null;
+        }
+        return invoice;
+    }
+
+    @RequestMapping(value = "/canceltransaction/{id_invoice}", method= RequestMethod.POST)
+    public Invoice cancelTransaction(@PathVariable int id_invoice)
+    {
+        Invoice invoice;
+        try {
+            invoice = DatabaseInvoice.getInvoice(id_invoice);
+            Transaction.cancelTransaction(invoice);
+        } catch (Exception ex) {
+            ex.getMessage();
+            return null;
+        }
+        return invoice;
+    }
+
+    @RequestMapping(value = "/finishtransaction/{id_invoice}", method= RequestMethod.POST)
+    public Invoice finishTransaction(@PathVariable int id_invoice)
+    {
+        Invoice invoice;
+        try {
+            invoice = DatabaseInvoice.getInvoice(id_invoice);
+            Transaction.finishTransaction(invoice);
+        } catch (Exception ex) {
+            ex.getMessage();
+            return null;
+        }
+        return invoice;
     }
 }

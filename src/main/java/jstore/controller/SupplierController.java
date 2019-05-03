@@ -1,23 +1,37 @@
 package jstore.controller;
+
 import jstore.*;
 import org.springframework.web.bind.annotation.*;
-import java.util.Calendar;
-import java.util.*;
 
+import java.util.ArrayList;
+import java.util.Calendar;
+
+@RestController
 public class SupplierController {
 
-    @RequestMapping(value = "/suppliers", method = RequestMethod.GET)
+    @RequestMapping(value = "/suppliers", method= RequestMethod.GET)
     public ArrayList<Supplier> supplierList()
     {
-        ArrayList<Supplier> tempDatabaseSupplier = DatabaseSupplier.getSupplierDatabase();
-        return tempDatabaseSupplier;
+        ArrayList<Supplier> list;
+        try {
+            list = DatabaseSupplier.getSupplierDatabase();
+        } catch (Exception ex) {
+            ex.getMessage();
+            return null;
+        }
+        return list;
     }
 
-    @RequestMapping(value = "/suppliers/{id_supplier}", method = RequestMethod.GET)
-    public Supplier getSupplier(@PathVariable int id)
+    @RequestMapping(value = "/suppliers/{id_supplier}", method= RequestMethod.GET)
+    public Supplier getItemFromID(@PathVariable int id_supplier)
     {
-        Supplier tempSupplier = DatabaseSupplier.getSupplier(id);
-        return tempSupplier;
+        Supplier supplier;
+        try {
+            supplier = DatabaseSupplier.getSupplier(id_supplier);
+        } catch (Exception ex) {
+            ex.getMessage();
+            return null;
+        }
+        return supplier;
     }
-
 }

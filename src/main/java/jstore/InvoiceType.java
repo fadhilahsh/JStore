@@ -2,8 +2,8 @@ package jstore;
 /**
  * Enumeration class InvoiceType - write a description of the enum class here
  *
- * @author (your name here)
- * @version (version number or date here)
+ * @author fadhilah
+ * @version 2019
  */
 public enum InvoiceType
 {

@@ -41,11 +41,18 @@ public class CustomerController
         Customer customer = DatabaseCustomer.getCustomer(id);
         return customer;
     }
-    @RequestMapping(value = "/logincustomer/{email, password}", method=RequestMethod.POST)
-    public Customer getLoginCust (@RequestParam(value = "email") String email,
+    @RequestMapping(value = "/logincust", method=RequestMethod.POST)
+    public Customer LoginCust (@RequestParam(value = "email") String email,
                                   @RequestParam(value = "password") String password)
     {
-        return DatabaseCustomer.getCustomerLogin(email, password);
+        Customer customer;
+        try {
+            customer = DatabaseCustomer.getCustomerLogin(email, password);
+        } catch (Exception ex) {
+            ex.getMessage();
+            return null;
+        }
+        return customer;
 
     }
 

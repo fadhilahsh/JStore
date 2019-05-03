@@ -1,4 +1,5 @@
 package jstore;
+import javax.xml.crypto.Data;
 import java.util.*;
 /**
  * Kelas JStore merupakan main menu dari Objek JStore 
@@ -12,109 +13,53 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 
 public class JStore {
-    public JStore() {
+    public JStore()
+    {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(JStore.class, args);
+
 
         Location lokasi = new Location("Bandung", "Jawa Barat", "Dingin");
         try {
-            DatabaseSupplier.addSupplier(new Supplier("Baby", "baby.yl@ui.ac.id", "08221431823", lokasi));
-            DatabaseSupplier.addSupplier(new Supplier("Bepel", "bepel.uph@ui.ac.id", "082214318230", lokasi));
-            DatabaseSupplier.addSupplier(new Supplier("Bayleh", "bayleh.ast@ui.ac.id", "082214318211", lokasi));
-            //DatabaseSupplier.addSupplier(new Supplier("Saripah", "hana.saripah@ui.ac.id", "082214318256", lokasi));
-        } catch (SupplierAlreadyExistsException sup) {
-            System.out.println(sup.getExMessage());
+            DatabaseSupplier.addSupplier(new Supplier("Bepel", "bepel@gmail.com", "654321", lokasi));
+        } catch (SupplierAlreadyExistsException e) {
+            System.out.println(e.getExMessage());
         }
+        try {
+            DatabaseSupplier.addSupplier(new Supplier("Bayleh", "bayleh@gmail.com", "654322", lokasi));
+        } catch (SupplierAlreadyExistsException e) {
+            System.out.println(e.getExMessage());
+        }
+        try {
+            DatabaseSupplier.addSupplier(new Supplier("Saripah", "saripah@gmail.com", "654323", lokasi));
+        } catch (SupplierAlreadyExistsException e) {
+            System.out.println(e.getExMessage());
+        }
+
 
         try {
-            DatabaseCustomer.addCustomer(new Customer("Bana", "bana@ui.ac.id", "banana", "bana123", 1997, 10, 16));
-            DatabaseCustomer.addCustomer(new Customer("Uci", "uci@ui.ac.id", "usip", "uci123", 1998, 10, 16));
-            DatabaseCustomer.addCustomer(new Customer("Sipa", "Sipa@ui.ac.id", "sipah", "sipa123", 1999, 10, 16));
-            DatabaseCustomer.addCustomer(new Customer("Copu", "Copu@ui.ac.id", "copucer", "copu123", 1996, 10, 16));
-        } catch (CustomerAlreadyExistsException cust) {
-            System.out.println(cust.getExMessage());
+            DatabaseItem.addItem(new Item("tv",  ItemStatus.Sold, 450, DatabaseSupplier.getSupplier(1), ItemCategory.Electronics));
+        } catch (ItemAlreadyExistsException e) {
+            System.out.println(e.getExMessage());
         }
-
         try {
-            DatabaseItem.addItem(new Item("Hp", 50,ItemCategory.Electronics ,ItemStatus.New, DatabaseSupplier.getSupplier(1)));
-            DatabaseItem.addItem(new Item("Pulpen", 20, ItemCategory.Stationery, ItemStatus.New, DatabaseSupplier.getSupplier(2)));
-            DatabaseItem.addItem(new Item("Buku", 5, ItemCategory.Stationery, ItemStatus.New, DatabaseSupplier.getSupplier(1)));
-            DatabaseItem.addItem(new Item("Pensil", 15, ItemCategory.Stationery, ItemStatus.New, DatabaseSupplier.getSupplier(4)));
-        } catch (ItemAlreadyExistsException item) {
-            System.out.println(item.getExMessage());
+            DatabaseItem.addItem(new Item("hp",  ItemStatus.New,700, DatabaseSupplier.getSupplier(2), ItemCategory.Electronics));
+        } catch (ItemAlreadyExistsException e) {
+            System.out.println(e.getExMessage());
         }
-
-        ArrayList<Integer> item1 = new ArrayList<>();
-        item1.add(1);
-        item1.add(2);
-        ArrayList<Integer> item2 = new ArrayList<>();
-        item2.add(3);
-        ArrayList<Integer> item3 = new ArrayList<>();
-        item3.add(3);
-        item3.add(2);
-
         try {
-            DatabaseInvoice.addInvoice(new Sell_Paid(item1, DatabaseCustomer.getCustomer(1)));
-            DatabaseInvoice.addInvoice(new Sell_Paid(item1, DatabaseCustomer.getCustomer(1)));
-            DatabaseInvoice.addInvoice(new Sell_Unpaid(item2, DatabaseCustomer.getCustomer(2)));
-            //DatabaseInvoice.addInvoice(new Sell_Installment(item3, DatabaseCustomer.(1), DatabaseCustomer.getCustomer(3)));
-        } catch (InvoiceAlreadyExistsException invoice) {
-            System.out.println(invoice.getExMessage());
+            DatabaseItem.addItem(new Item("ps",ItemStatus.Second, 160, DatabaseSupplier.getSupplier(3), ItemCategory.Electronics));
+        } catch (ItemAlreadyExistsException e) {
+            System.out.println(e.getExMessage());
+        }
+        try {
+            DatabaseItem.addItem(new Item("jbl", ItemStatus.Refubrished,158, DatabaseSupplier.getSupplier(2), ItemCategory.Electronics));
+        } catch (ItemAlreadyExistsException e) {
+            System.out.println(e.getExMessage());
         }
 
-
-        try{
-            DatabaseInvoice.removeInvoice(7);
-        }catch (InvoiceNotFoundException remove){
-            System.out.println(remove.getExMessage());
-        }
-
-        try{
-            DatabaseCustomer.removeCustomer(7);
-        }catch (CustomerNotFoundException remove){
-            System.out.println(remove.getExMessage());
-        }
-
-        try{
-            DatabaseSupplier.removeSupplier(7);
-        }catch (SupplierNotFoundException remove){
-            System.out.println(remove.getExMessage());
-        }catch (ItemNotFoundException remove){
-            System.out.println(remove.getExMessage());
-        }
-
-        try{
-            DatabaseItem.removeItem(7);
-        }catch (ItemNotFoundException remove){
-            System.out.println(remove.getExMessage());
-        }
-
-
-
-        try{
-            DatabaseInvoice.getActiveOrder(DatabaseCustomer.getCustomer(3));
-        }catch (CustomerDoesntHaveActiveException c){
-            System.out.println(c.getExMessage());
-        }
-
-        DatabaseSupplier.getSupplier(1);
-        DatabaseCustomer.getCustomer(2);
-        DatabaseItem.getItemFromID(3);
-        DatabaseInvoice.getInvoice(4);
-
-
-        Transaction.finishTransaction(DatabaseInvoice.getInvoice(2));
-
-        try{
-            Transaction.cancelTransaction(DatabaseInvoice.getInvoice(3));
-        }
-        catch (InvoiceNotFoundException cancel) {
-            System.out.println(cancel);
-        }
-
+        SpringApplication.run(JStore.class, args);
 
     }
-
 }

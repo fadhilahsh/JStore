@@ -1,8 +1,9 @@
 package jstore;
+import java.util.*;
 /**
  * Write a description of class Transaction here.
  *
- * @author Fadhilah
+ * @author fadhilah
  * @version 2019
  */
 import java.util.ArrayList;
@@ -96,17 +97,17 @@ public class Transaction {
      */
     public static boolean finishTransaction(Invoice invoice)
     {
-        if(invoice == DatabaseInvoice.getInvoice
-                (invoice.getId()))
+        invoice = DatabaseInvoice.getInvoice(invoice.getId());
+        if(invoice == null)
         {
-            return true;
+            return false;
         }
         if(invoice.getInvoiceStatus() == InvoiceStatus.Unpaid
                 || invoice.getInvoiceStatus() == InvoiceStatus.Installment)
         {
             invoice.setIsActive(false);
             invoice.toString();
-            System.out.println("isActive : " + invoice.getIsActived());
+            System.out.println("isActive : " + invoice.getIsActive());
             return true;
         }
         return false;
@@ -131,7 +132,7 @@ public class Transaction {
         {
             invoice.setIsActive(false);
             System.out.println("\nCancel Transaction");
-            System.out.println("isActive : " + invoice.getIsActived());
+            System.out.println("isActive : " + invoice.getIsActive());
             return true;
         }
         DatabaseInvoice.removeInvoice(invoice.getId());

@@ -1,11 +1,11 @@
-package jstore;
+
 /**
  * Write a description of class Sell_Unpaid here.
  *
  * @author fadhilah
  * @version 2019
  */
-
+package jstore;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.ArrayList;
