@@ -7,16 +7,19 @@ package jstore;
  */
 public enum InvoiceType
 {
-    Buy ("Buy"),
-    Sell("Sell");
-    
-    private String value;
-    private InvoiceType(String value)
+    Buy("Buy"), Sell("Sell");
+
+    private String strInvoiceType;
+
+    private InvoiceType(String strInvoiceType)
     {
-        this.value=value;
+        this.strInvoiceType=strInvoiceType;
     }
+    /**
+     * @return strInvoiceType
+     */
     public String toString()
     {
-        return value;
+        return strInvoiceType;
     }
 }

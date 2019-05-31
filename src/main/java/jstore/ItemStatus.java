@@ -7,20 +7,16 @@ package jstore;
  */
 public enum ItemStatus
 {
-    New("New"), 
-    Second("Second"), 
-    Refubrished("Refubrished"), 
-    Sold("Sold");
-    
-    private String value;
-    private ItemStatus(String value)
+    New("New"), Second("Second"), Refurbished("Refurbished"), Sold("Sold");
+
+    private String strItemStatus;
+
+    private ItemStatus(String strItemStatus)
     {
-        this.value=value;
+        this.strItemStatus=strItemStatus;
     }
-   
-    public String toString()
-    {
-        return value;
+
+    public String toString(){
+        return strItemStatus;
     }
-    
 }

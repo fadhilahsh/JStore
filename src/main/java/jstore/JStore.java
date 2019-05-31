@@ -12,54 +12,51 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 
-public class JStore {
-    public JStore()
+public class JStore
+{
+    // instance variables - replace the example below with your own
+
+
+    /**
+     * Constructor for objects of class JStore
+     */
+    public static void main(String[] args)
     {
-    }
-
-    public static void main(String[] args) {
-
-
-        Location lokasi = new Location("Bandung", "Jawa Barat", "Dingin");
+        Location loc = new Location("Bandung", "Jawa Barat", "Kota");
+//
         try {
-            DatabaseSupplier.addSupplier(new Supplier("Bepel", "bepel@gmail.com", "654321", lokasi));
-        } catch (SupplierAlreadyExistsException e) {
-            System.out.println(e.getExMessage());
-        }
-        try {
-            DatabaseSupplier.addSupplier(new Supplier("Bayleh", "bayleh@gmail.com", "654322", lokasi));
-        } catch (SupplierAlreadyExistsException e) {
-            System.out.println(e.getExMessage());
-        }
-        try {
-            DatabaseSupplier.addSupplier(new Supplier("Saripah", "saripah@gmail.com", "654323", lokasi));
+            DatabaseSupplier.addSupplier(new Supplier("Pidil", "pidil@email.com", "082214318260", loc));
         } catch (SupplierAlreadyExistsException e) {
             System.out.println(e.getExMessage());
         }
 
-
         try {
-            DatabaseItem.addItem(new Item("tv",  ItemStatus.Sold, 450, DatabaseSupplier.getSupplier(1), ItemCategory.Electronics));
+            DatabaseItem.addItem(new Item("Oppo F1", ItemStatus.New, 100000, DatabaseSupplier.getSupplier(1), ItemCategory.Electronics));
         } catch (ItemAlreadyExistsException e) {
             System.out.println(e.getExMessage());
         }
         try {
-            DatabaseItem.addItem(new Item("hp",  ItemStatus.New,700, DatabaseSupplier.getSupplier(2), ItemCategory.Electronics));
+            DatabaseItem.addItem(new Item("Lemari", ItemStatus.Refurbished, 1000000, DatabaseSupplier.getSupplier(1), ItemCategory.Furniture));
         } catch (ItemAlreadyExistsException e) {
             System.out.println(e.getExMessage());
         }
         try {
-            DatabaseItem.addItem(new Item("ps",ItemStatus.Second, 160, DatabaseSupplier.getSupplier(3), ItemCategory.Electronics));
+            DatabaseItem.addItem(new Item("Buku", ItemStatus.Second, 400000, DatabaseSupplier.getSupplier(1), ItemCategory.Stationery));
         } catch (ItemAlreadyExistsException e) {
             System.out.println(e.getExMessage());
         }
-        try {
-            DatabaseItem.addItem(new Item("jbl", ItemStatus.Refubrished,158, DatabaseSupplier.getSupplier(2), ItemCategory.Electronics));
-        } catch (ItemAlreadyExistsException e) {
-            System.out.println(e.getExMessage());
-        }
+//        try {
+//            DatabaseItem.addItem(new Item("Resistor", ItemStatus.Sold, 1000, DatabaseSupplier.getSupplier(1), ItemCategory.Electronics));
+//        } catch (ItemAlreadyExistsException e) {
+//            System.out.println(e.getExMessage());
+//        }
 
         SpringApplication.run(JStore.class, args);
+    }
+
+    public JStore()
+    {
 
     }
+
 }

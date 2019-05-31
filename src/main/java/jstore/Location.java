@@ -7,91 +7,85 @@ package jstore;
  */
 public class Location
 {
-    //variabel yang digunakan
+    // instance variables - replace the example below with your own
     private String province;
     private String description;
     private String city;
 
     /**
-     * Constructor untuk objek dari class Location
+     * Konstruktor untuk objek dari kelas Supplier
      */
     public Location(String city, String province, String description)
     {
-        this.city=city;
-        this.province=province;
-        this.description=description;
+        // initialise instance variables
+        this.city = city;
+        this.province = province;
+        this.description = description;
     }
 
     /**
-     * Menampilkan nama provinsi
-     * @method getprovince()
-     * @return province
+     * Method getter untuk mengambil data
+     *
+     * @return    province
      */
     public String getProvince()
     {
-        return province;
+        // put your code here
+        return this.province;
     }
+
     /**
-     * Menampilkan nama kota
-     * @method getCity()
-     * @return city
+     * Method getter untuk mengambil data
+     *
+     * @return    city
      */
     public String getCity()
     {
-        return city;
+        return this.city;
     }
+
     /**
-     * Menampilkan deskripsi
-     * @method getDescription()
-     * @return description
+     * Method getter untuk mengambil data
+     *
+     * @return    description
      */
     public String getDescription()
     {
-        return description;
+        return this.description;
     }
+
     /**
-     * Mengubah nama provinsi
-     * @method setprovince()
+     * Method setter untuk menentukan data
+     *
      * @param province
      */
     public void setProvince(String province)
     {
-        this.province=province;
+        this.province = province;
     }
+
     /**
-     * Mengubah nama kota
-     * @method setCity()
+     * Method setter untuk menentukan data
+     *
      * @param city
      */
-     public void setCity(String city)
+    public void setCity(String city)
     {
-        this.city=city;
+        this.city = city;
     }
+
     /**
-     * Mengubah deskripsi
-     * @method setDescription()
+     * Method setter untuk menentukan data
+     *
      * @param description
      */
-     public void setDescription(String description)
+    public void setDescription(String description)
     {
-        this.description=description;
+        this.description = description;
     }
-    /**
-     * mencetak nama provinsi
-     * Method printData()
-     */
+
     public String toString()
     {
-        /*return "Location"+
-        "\nprovinsi:" +province+
-        "\nkota:"+city+
-        "\ndeskripsi:"+description;
-        */
-    
-        System.out.println("==========LOCATION==========");
-        System.out.println("Provinsi: " + this.province);
-        System.out.println("Kota: " + this.city);
-        System.out.println("Deskripsi: " + this.description);
-        return "";
+        return "Province: " +province+ "\nCity: " +city+ "\nDescription: " +description;
     }
 }

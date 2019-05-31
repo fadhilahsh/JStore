@@ -7,7 +7,7 @@ package jstore;
  */
 public class Supplier
 {
-    //variable yang digunakan
+    // instance variables - replace the example below with your own
     private int id;
     private String name;
     private String email;
@@ -15,123 +15,121 @@ public class Supplier
     private Location location;
 
     /**
-     * Constructor untuk objek dari class Supplier
+     * Konstruktor untuk objek dari kelas Supplier
      */
     public Supplier(String name, String email, String phoneNumber, Location location)
     {
-     //this.id=id;
-     this.name=name;
-     this.email=email;
-     this.phoneNumber=phoneNumber;
-     this.location=location;
-     this.id=DatabaseSupplier.getLastSupplierID()+1;
+        // initialise instance variables
+        this.id=DatabaseSupplier.getLastSupplierID()+1;
+        this.name=name;
+        this.email=email;
+        this.phoneNumber=phoneNumber;
+        this.location=location;
     }
 
     /**
-     *menampilkan nomor id supplier 
+     * Method getter untuk mengambil data
      *
-     * @method getId()
-     * @return id
+     * @return    id
      */
     public int getId()
     {
-     return id;
+        // put your code here
+        return id;
     }
+
     /**
-     *menampilkan nama supplier 
+     * Method getter untuk mengambil data
      *
-     * @method getName()
-     * @return name
+     * @return    name
      */
-     public String getName()
+    public String getName()
     {
-     return name;
+        return name;
     }
+
     /**
-     *menampilkan email supplier 
+     * Method getter untuk mengambil data
      *
-     * @method getEmail()
-     * @return email
+     * @return    email
      */
-     public String getEmail()
+    public String getEmail()
     {
-     return email;
+        return email;
     }
+
     /**
-     *menampilkan nomor hanphone supplier 
+     * Method getter untuk mengambil data
      *
-     * @method getPhoneNumber()
-     * @return phoneNumber
+     * @return    phoneNumber
      */
-     public String getPhoneNumber()
+    public String getPhoneNumber()
     {
-     return phoneNumber;
+        return phoneNumber;
     }
+
     /**
-     *menampilkan lokasi supplier 
-     * @method getLocation()
-     * @return location
+     * Method getter untuk mengambil data
+     *
+     * @return    location
      */
     public Location getLocation()
     {
-     return location;
+        return location;
     }
+
     /**
-     *mengubah id supplier 
-     * @method setId()
+     * Method setter untuk menentukan data
+     *
      * @param id
      */
-     public void setId(int id)
+    public void setId(int id)
     {
-     this.id=id;
+        this.id = id;
     }
+
     /**
-     *mengubah nama supplier 
-     * @method setName()
+     * Method setter untuk menentukan data
+     *
      * @param name
      */
-     public void setName(String name)
+    public void setName(String name)
     {
-     this.name=name;
+        this.name = name;
     }
+
     /**
-     *mengubah email supplier 
-     * @method setEmail()
+     * Method setter untuk menentukan data
+     *
+     * @param email
      */
-     public void setEmail(String Email)
+    public void setEmail(String email)
     {
-     this.email=email;
+        this.email = email;
     }
+
     /**
-     *mengubah nomor handphone supplier 
-     * @method setPhoneNumber()
+     * Method setter untuk menentukan data
+     *
      * @param phoneNumber
      */
-     public void setPhoneNumber(String phoneNumber )
+    public void setPhoneNumber(String phoneNumber)
     {
-     this.phoneNumber=phoneNumber;
+        this.phoneNumber = phoneNumber;
     }
+
     /**
-     *mengubah lokasi supplier 
-     * @method setLocation()
+     * Method setter untuk menentukan data
+     *
      * @param location
      */
-     public void setLocation(Location location)
+    public void setLocation(Location location)
     {
-    this.location=location;
+        this.location = location;
     }
-     /**
-     * menampilkan nama supplier 
-     * @method printData()
-     */
-     public String toString()
+
+    public String toString()
     {
-        System.out.println("SUPPLIER");
-        System.out.println("ID" + id);
-        System.out.println("NAMA" + name);
-        System.out.println("EMAIL" + email);
-        System.out.println("NOMOR TELFON" + phoneNumber);
-        System.out.println("Lokasi" + location.getCity());
-        return "";
+        return "=============SUPPLIER=============="+"\nID: " +id+ "\nName: " +name+ "\nEmail: " +email+ "\nPhone Number: " +phoneNumber+ "\nLocation: "+location.getCity();
     }
 }
